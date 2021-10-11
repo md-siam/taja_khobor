@@ -1,16 +1,7 @@
 # taja_khobor
 
-A new Flutter application.
+It's a mobile application that will use the machine learning algorithm to personalize news according to individual taste. In addition to that, it will provide comfort to your eyes by reading aloud newspaper in both Bangla & English. Our goal is to provide a sustainable way of distributing news to everyone.
 
-## Getting Started
+## Official URL
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://tajakhobor.news/
