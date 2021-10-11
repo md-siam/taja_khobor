@@ -7,4 +7,5 @@ It's a mobile application that will use the machine learning algorithm to person
 https://tajakhobor.news/
 
 ## Screen Shots
-<img align="right" src="screen_shots/Screen Shot 2021-10-11 at 7.24.48 PM.png" height="280"></img>
+<img align="left" src="screen_shots/Screen Shot 2021-10-11 at 7.24.35 PM.png" height="400"></img>
+<img align="left" src="screen_shots/Screen Shot 2021-10-11 at 7.24.48 PM.png" height="400"></img>
