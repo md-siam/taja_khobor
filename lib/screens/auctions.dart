@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
 import '../alerts/alerts.dart';
+import '../controllers/controllers.dart';
 import '../models/models.dart';
 import '../widgets/widgets.dart';
 
@@ -34,8 +36,8 @@ class AuctionsScreen extends StatelessWidget {
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
-              permanentlyDisplay: false,
-            )
+                    permanentlyDisplay: false,
+                  )
                 : null,
             body: Column(
               children: <Widget>[

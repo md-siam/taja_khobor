@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/models.dart';
+
+import '../controllers/controllers.dart';
 import '../screens/screens.dart';
 
 class AuctionsContainer extends StatelessWidget {

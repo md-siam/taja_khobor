@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/models.dart';
+
+import '../controllers/controllers.dart';
 
 class COVID19Counter extends StatelessWidget {
   final int number;
@@ -48,5 +49,3 @@ class COVID19Counter extends StatelessWidget {
     );
   }
 }
-
-

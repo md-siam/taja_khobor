@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
+import '../controllers/controllers.dart';
 import '../models/models.dart';
-import '../screens/screens.dart';
 import '../widgets/widgets.dart';
 
 class BookmarksScreen extends StatelessWidget {

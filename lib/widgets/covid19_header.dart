@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../models/models.dart';
+
+import '../controllers/controllers.dart';
 
 class COVID19Header extends StatefulWidget {
   final String image;

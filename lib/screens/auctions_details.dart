@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../alerts/alerts.dart';
+import '../controllers/controllers.dart';
 import '../models/models.dart';
 
 class AuctionDetailsScreen extends StatelessWidget {
@@ -113,7 +115,8 @@ class AuctionDetailsScreen extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15.0),
                               child: Image(
-                                image: AssetImage(auctionsList[id]['imgs'][imgId]),
+                                image:
+                                    AssetImage(auctionsList[id]['imgs'][imgId]),
                                 fit: BoxFit.cover,
                               ),
                             ),

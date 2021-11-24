@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../alerts/alerts.dart';
-import '../models/models.dart';
+import '../controllers/controllers.dart';
 
 class JobsDetailsScreen extends StatelessWidget {
   final int id;

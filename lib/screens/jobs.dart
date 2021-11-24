@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../alerts/alerts.dart';
+import '../controllers/controllers.dart';
 import '../models/models.dart';
 import '../screens/screens.dart';
 import '../widgets/widgets.dart';
@@ -34,8 +36,8 @@ class JobsScreen extends StatelessWidget {
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
-              permanentlyDisplay: false,
-            )
+                    permanentlyDisplay: false,
+                  )
                 : null,
             body: Column(
               children: <Widget>[

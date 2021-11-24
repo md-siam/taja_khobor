@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/models.dart';
+
+import '../controllers/controllers.dart';
 
 class RatingWidget extends StatelessWidget {
   final int id;
