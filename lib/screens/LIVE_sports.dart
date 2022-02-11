@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import '../models/models.dart';
 import '../widgets/widgets.dart';
 
@@ -250,26 +251,26 @@ class LIVE_SportsScreen extends StatelessWidget {
               items: [
                 BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.listAlt),
-                  title: Padding(
-                    padding: const EdgeInsets.only(top: 4.0),
-                    child: Icon(
-                      FontAwesomeIcons.solidCircle,
-                      size: 8.0,
-                      color: Colors.blue,
-                    ),
-                  ),
+                  // title: Padding(
+                  //   padding: const EdgeInsets.only(top: 4.0),
+                  //   child: Icon(
+                  //     FontAwesomeIcons.solidCircle,
+                  //     size: 8.0,
+                  //     color: Colors.blue,
+                  //   ),
+                  // ),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.bookmark),
-                  title: Text(""),
+                  // title: Text(""),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.chartBar),
-                  title: Text(""),
+                  //title: Text(""),
                 ),
                 BottomNavigationBarItem(
                   icon: Icon(FontAwesomeIcons.clipboard),
-                  title: Text(""),
+                  //title: Text(""),
                 ),
               ],
             ),
