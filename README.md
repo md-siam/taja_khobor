@@ -30,7 +30,7 @@ Note: It's an open-source project; hence anyone can use this code according to t
 [flutter_svg: ^1.0.3](https://pub.dev/packages/flutter_svg)<br>
 // For converting text-to-speech<br>
 [flutter_tts: ^3.3.3](https://pub.dev/packages/flutter_tts)<br>
-// For icons<br>
+// For using awesome icons<br>
 [font_awesome_flutter: ^9.2.0](https://pub.dev/packages/font_awesome_flutter)<br>
 // For using fonts available in google fonts<br>
 [google_fonts: ^2.3.1](https://pub.dev/packages/google_fonts)<br>
@@ -39,4 +39,25 @@ Note: It's an open-source project; hence anyone can use this code according to t
 // For launching specific URLs<br>
 [url_launcher: ^6.0.20](https://pub.dev/packages/url_launcher)<br>
 // For playing videos<br>
-[video_player: ^2.2.18](https://pub.dev/packages/video_player)<br>
+[video_player: ^2.2.18](https://pub.dev/packages/video_player)<br><br>
+
+# Installation
+
+1. Open your workspace folder in 'Command Prompt' or 'Terminal'
+2. Copy & paste this command:
+
+```
+$ git clone https://github.com/md-siam/taja_khobor.git
+```
+
+3. Open the 'taja_khobor' folder using your Android Studio or VSCode.
+4. Use this commands in your Android Studio / VSCode terminal:
+
+```
+$ flutter pub get
+$ flutter run
+```
+
+5. Enjoy!
+
+Note: To run this application on your system, you will need [git](https://git-scm.com/) and [flutter](https://docs.flutter.dev/get-started/install) environment already installed.
