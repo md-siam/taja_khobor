@@ -75,7 +75,7 @@ class JobsDetailsScreen extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       "${jobList[id].title}",
-                      style: Theme.of(context).textTheme.headline1,
+                      style: Theme.of(context).textTheme.headline5,
                     ),
                     Text(
                       "${jobList[id].location}",

@@ -242,38 +242,6 @@ class LIVE_SportsScreen extends StatelessWidget {
                 ),
               ],
             ),
-            //Bottom Navigation bar
-            bottomNavigationBar: BottomNavigationBar(
-              type: BottomNavigationBarType.fixed,
-              selectedItemColor: Colors.blue,
-              currentIndex: 0,
-              elevation: 0,
-              items: [
-                BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.listAlt),
-                  // title: Padding(
-                  //   padding: const EdgeInsets.only(top: 4.0),
-                  //   child: Icon(
-                  //     FontAwesomeIcons.solidCircle,
-                  //     size: 8.0,
-                  //     color: Colors.blue,
-                  //   ),
-                  // ),
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.bookmark),
-                  // title: Text(""),
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.chartBar),
-                  //title: Text(""),
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(FontAwesomeIcons.clipboard),
-                  //title: Text(""),
-                ),
-              ],
-            ),
           ),
         )
       ],

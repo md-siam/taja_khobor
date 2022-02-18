@@ -20,7 +20,7 @@ class SettingsScreen extends StatelessWidget {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.settings),
+              title: const Text(ScreenTitles.settings),
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
@@ -32,7 +32,7 @@ class SettingsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     "ACCOUNT",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -50,12 +50,12 @@ class SettingsScreen extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         ListTile(
-                          leading: CircleAvatar(
+                          leading: const CircleAvatar(
                             backgroundColor: Colors.white,
                             backgroundImage: ExactAssetImage(
                                 'assets/images/main/mdsiam.png'),
                           ),
-                          title: Text("Md. Siam"),
+                          title:const  Text("Md. Siam"),
                           onTap: () {},
                         ),
                         _buildDivider(),
@@ -69,8 +69,8 @@ class SettingsScreen extends StatelessWidget {
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.userCog),
-                          title: Text("User Configuration"),
+                          leading: const Icon(FontAwesomeIcons.userCog),
+                          title:const  Text("User Configuration"),
                           trailing: Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('User Configuration'); //open change password
@@ -218,63 +218,63 @@ class SettingsScreen extends StatelessWidget {
                     ),
                     child: Column(
                       children: <Widget>[
-                        SwitchListTile(
+                        SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: true,
-                          title: Text("System Theme Mode"),
+                          title: const Text("System Theme Mode"),
                           onChanged: (val) {},
                         ),
                         _buildDivider(),
-                        SwitchListTile(
+                        SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: false,
-                          title: Text("Dark Mode"),
+                          title: const Text("Dark Mode"),
                           onChanged: null,
                         ),
                       ],
                     ),
                   ),
                   const SizedBox(height: 20.0),
-                  Text(
+                  const Text(
                     "PUSH NOTIFICATIONS",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20.0,
                     ),
                   ),
                   Card(
-                    //color: Theme.of(context).accentColor,
+                    //color: Theme.of(conconst Text).accentColor,
                     margin: const EdgeInsets.symmetric(
                       vertical: 8.0,
                       horizontal: 0,
                     ),
                     child: Column(
                       children: <Widget>[
-                        SwitchListTile(
+                        SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: true,
-                          title: Text("Received notification"),
+                          title: const Text("Received notification"),
                           onChanged: (val) {},
                         ),
                         _buildDivider(),
-                        SwitchListTile(
+                        SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: true,
-                          title: Text("Received newsletter"),
+                          title: const Text("Received newsletter"),
                           onChanged: (val) {},
                         ),
                         _buildDivider(),
-                        SwitchListTile(
+                        SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: false,
-                          title: Text("Received Offer Notification"),
+                          title: const Text("Received Offer Notification"),
                           onChanged: null,
                         ),
                         _buildDivider(),
-                        SwitchListTile(
+                        SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: true,
-                          title: Text("Received App Updates"),
+                          title: const Text("Received App Updates"),
                           onChanged: (val) {},
                         ),
                       ],
@@ -288,7 +288,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                     child: ListTile(
                       leading: Icon(FontAwesomeIcons.signOutAlt),
-                      title: Text("Logout"),
+                      title: const Text("Logout"),
                       onTap: () {
                         print('Logout'); //logout
                       },

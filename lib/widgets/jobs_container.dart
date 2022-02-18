@@ -22,7 +22,7 @@ class JobContainer extends StatelessWidget {
         decoration: BoxDecoration(
           color: Theme.of(context).cardColor,
           borderRadius: BorderRadius.circular(9.0),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
                 color: Colors.black26, blurRadius: 5.0, offset: Offset(0, 3))
           ],
@@ -40,14 +40,14 @@ class JobContainer extends StatelessWidget {
                     width: 71,
                   ),
                 ),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
                         "$title",
-                        style: Theme.of(context).textTheme.headline1,
+                        style: Theme.of(context).textTheme.headline5,
                       ),
                       Text(
                         "$location",
@@ -64,16 +64,20 @@ class JobContainer extends StatelessWidget {
             SizedBox(height: 5),
             Text(
               "$description",
-              style:
-                  Theme.of(context).textTheme.bodyText1!.apply(color: Colors.grey),
+              style: Theme.of(context)
+                  .textTheme
+                  .bodyText1!
+                  .apply(color: Colors.grey),
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
             ),
             SizedBox(height: 9),
             Text(
               "$salary",
-              style:
-                  Theme.of(context).textTheme.subtitle1!.apply(fontWeightDelta: 2),
+              style: Theme.of(context)
+                  .textTheme
+                  .subtitle1!
+                  .apply(fontWeightDelta: 2),
             )
           ],
         ),

@@ -19,8 +19,8 @@ export './puzzles/puzzles_screens.dart';
 export 'wallet.dart';
 export 'settings.dart';
 export 'help.dart';
+export '/screens/covid_19.dart';
 
 //wallet
 export 'referral_credits.dart';
 export 'transfer_credits.dart';
-
