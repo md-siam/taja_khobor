@@ -20,7 +20,7 @@ Note: It's an open-source project; hence anyone can use this code according to t
 
 ## Packages used:
 
-<img align="left" src="screenshots/demo.gif" height="450"></img>
+<img align="left" src="screenshots/demo.gif" height="550"></img>
 
 // For using ready-made clippers<br>
 [flutter_custom_clippers: ^2.0.0](https://pub.dev/packages/flutter_custom_clippers)<br>
