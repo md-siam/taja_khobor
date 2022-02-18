@@ -4,12 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../controllers/controllers.dart';
 
 class COVID19Header extends StatefulWidget {
-  final String image;
-  final String textTop;
-  final String textBottom;
-  final double offset;
+  final String? image;
+  final String? textTop;
+  final String? textBottom;
+  final double? offset;
   const COVID19Header(
-      {Key key, this.image, this.textTop, this.textBottom, this.offset})
+      {Key? key, this.image, this.textTop, this.textBottom, this.offset})
       : super(key: key);
 
   @override
@@ -46,16 +46,16 @@ class _COVID19HeaderState extends State<COVID19Header> {
               child: Stack(
                 children: <Widget>[
                   Positioned(
-                    top: (widget.offset < 0) ? 0 : widget.offset,
+                    top: (widget.offset! < 0) ? 0 : widget.offset,
                     child: SvgPicture.asset(
-                      widget.image,
+                      widget.image!,
                       width: 230,
                       fit: BoxFit.fitWidth,
                       alignment: Alignment.topCenter,
                     ),
                   ),
                   Positioned(
-                    top: 20 - widget.offset / 2,
+                    top: 20 - widget.offset! / 2,
                     left: 150,
                     child: Text(
                       "${widget.textTop} \n${widget.textBottom}",

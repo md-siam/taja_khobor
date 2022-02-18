@@ -14,11 +14,11 @@ List<String> saleCategories = [
 ];
 
 class Sale {
-  String imageUrl;
-  String title;
-  String date;
-  String description;
-  List<String> screenshots;
+  String? imageUrl;
+  String? title;
+  String? date;
+  String? description;
+  List<String>? screenshots;
 
   Sale({
     this.imageUrl,

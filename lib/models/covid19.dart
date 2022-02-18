@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class COVID19case {
-  Color color;
-  int number;
-  String title;
+  Color? color;
+  int? number;
+  String? title;
 
   COVID19case({
     this.color,
@@ -14,8 +14,8 @@ class COVID19case {
 
 //COVID19 symptoms
 class COVID19symptom {
-  String imageURL;
-  String title;
+  String? imageURL;
+  String? title;
 
   COVID19symptom({
     this.imageURL,
@@ -25,9 +25,9 @@ class COVID19symptom {
 
 //COVID19 prevention
 class COVID19prevention {
-  String text;
-  String imageURL;
-  String title;
+  String? text;
+  String? imageURL;
+  String? title;
 
   COVID19prevention({
     this.text,

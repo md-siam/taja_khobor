@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 enum ExpandedState { compact, expanded }
 
 class StocksNewsList extends StatefulWidget {
-  final Function onHeaderTapped;
-  final Function(DragUpdateDetails) onPanUpdate;
-  ExpandedState expandedState = ExpandedState.compact;
+  final Function? onHeaderTapped;
+  final Function(DragUpdateDetails)? onPanUpdate;
+  ExpandedState? expandedState = ExpandedState.compact;
 
   StocksNewsList({this.onHeaderTapped, this.expandedState, this.onPanUpdate});
 
@@ -29,7 +29,7 @@ class _StocksNewsListState extends State<StocksNewsList> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onVerticalDragUpdate: this.widget.onPanUpdate,
-      onTap: this.widget.onHeaderTapped,
+      onTap: this.widget.onHeaderTapped as void Function()?,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.grey[900],

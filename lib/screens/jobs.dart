@@ -7,7 +7,7 @@ import '../screens/screens.dart';
 import '../widgets/widgets.dart';
 
 class JobsScreen extends StatelessWidget {
-  const JobsScreen({Key key}) : super(key: key);
+  const JobsScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final bool displayMobileLayout = MediaQuery.of(context).size.width < 600;

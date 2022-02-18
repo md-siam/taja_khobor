@@ -3,7 +3,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class BhejaBilaiScreen extends StatelessWidget {
-  const BhejaBilaiScreen({Key key}) : super(key: key);
+  const BhejaBilaiScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final bool displayMobileLayout = MediaQuery.of(context).size.width < 600;

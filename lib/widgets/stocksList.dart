@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/models.dart';
 
 class StockList extends StatelessWidget {
-  final List<Stock> stocks;
+  final List<Stock>? stocks;
 
   StockList({this.stocks});
 
@@ -12,9 +12,9 @@ class StockList extends StatelessWidget {
       separatorBuilder: (context, index) {
         return Divider(color: Colors.grey[400]);
       },
-      itemCount: this.stocks.length,
+      itemCount: this.stocks!.length,
       itemBuilder: (context, index) {
-        final stock = this.stocks[index];
+        final stock = this.stocks![index];
 
         return ListTile(
           contentPadding: EdgeInsets.all(10),

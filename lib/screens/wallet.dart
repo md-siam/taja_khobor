@@ -4,7 +4,7 @@ import '../widgets/widgets.dart';
 import '../screens/screens.dart';
 
 class WalletScreen extends StatelessWidget {
-  const WalletScreen({Key key}) : super(key: key);
+  const WalletScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final bool displayMobileLayout = MediaQuery.of(context).size.width < 600;
@@ -85,7 +85,7 @@ class WalletScreen extends StatelessWidget {
                               "Referral Credits                        ",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .subtitle1!
                                   .apply(fontWeightDelta: 2),
                             ),
                             Text(
@@ -143,7 +143,7 @@ class WalletScreen extends StatelessWidget {
                               "Transfer Credits                        ",
                               style: Theme.of(context)
                                   .textTheme
-                                  .subtitle1
+                                  .subtitle1!
                                   .apply(fontWeightDelta: 2),
                             ),
                             Text(

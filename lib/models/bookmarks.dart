@@ -12,11 +12,11 @@ List<String> bookmarksCategories = [
 ];
 
 class Bookmark {
-  String imageUrl;
-  String title;
-  String date;
-  String description;
-  List<String> screenshots;
+  String? imageUrl;
+  String? title;
+  String? date;
+  String? description;
+  List<String>? screenshots;
 
   Bookmark({
     this.imageUrl,

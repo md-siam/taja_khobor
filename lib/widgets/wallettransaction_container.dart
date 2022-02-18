@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/models.dart';
 
 class TransactionContainer extends StatelessWidget {
-  final int i;
-  const TransactionContainer({Key key, this.i}) : super(key: key);
+  final int? i;
+  const TransactionContainer({Key? key, this.i}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +13,10 @@ class TransactionContainer extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: Text(
-                "${transactions[i]['title']}",
+                "${transactions[i!]['title']}",
                 style: Theme.of(context)
                     .textTheme
-                    .subtitle1
+                    .subtitle1!
                     .apply(fontWeightDelta: 2),
               ),
             ),
@@ -28,7 +28,7 @@ class TransactionContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15.0),
               ),
               child: Text(
-                "${transactions[i]['status']}",
+                "${transactions[i!]['status']}",
                 style: TextStyle(color: Colors.black),
               ),
             ),
@@ -38,21 +38,21 @@ class TransactionContainer extends StatelessWidget {
         Row(
           children: <Widget>[
             Text("Originator: "),
-            Text("${transactions[i]['originator']}")
+            Text("${transactions[i!]['originator']}")
           ],
         ),
         SizedBox(height: 5),
         Row(
           children: <Widget>[
             Text("Transaction Number: "),
-            Text("${transactions[i]['transaction_number']}")
+            Text("${transactions[i!]['transaction_number']}")
           ],
         ),
         SizedBox(height: 5),
         Row(
           children: <Widget>[
             Text("Type: "),
-            Text("${transactions[i]['type']}")
+            Text("${transactions[i!]['type']}")
           ],
         ),
         Row(

@@ -7,11 +7,11 @@ class TransformedCard extends StatefulWidget {
   final PlayingCard playingCard;
   final double transformDistance;
   final int transformIndex;
-  final int columnIndex;
-  final List<PlayingCard> attachedCards;
+  final int? columnIndex;
+  final List<PlayingCard>? attachedCards;
 
   TransformedCard({
-    @required this.playingCard,
+    required this.playingCard,
     this.transformDistance = 15.0,
     this.transformIndex = 0,
     this.columnIndex,
@@ -157,7 +157,7 @@ class _TransformedCardState extends State<TransformedCard> {
     }
   }
 
-  Image _suitToImage() {
+  Image? _suitToImage() {
     switch (widget.playingCard.cardSuit) {
       case CardSuit.hearts:
         return Image.asset('assets/images/puzzles/solitaire/hearts.png');

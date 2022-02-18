@@ -3,7 +3,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class StocksScreen extends StatefulWidget {
-  const StocksScreen({Key key}) : super(key: key);
+  const StocksScreen({Key? key}) : super(key: key);
   @override
   _StocksScreenState createState() => _StocksScreenState();
 }

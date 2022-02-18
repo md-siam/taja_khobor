@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:taja_khobor/screens/covid_19.dart';
+
 import './models/models.dart';
 import './screens/screens.dart';
 import './widgets/widgets.dart';
+import 'screens/covid_19.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,9 +19,10 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: ThemeData(
         brightness: Brightness.light,
-        backgroundColor: Colors.white24,   //background of TAJA logo
-        secondaryHeaderColor: Colors.blue, //secondary header for Jobs and Audiobooks
-        cardColor: Colors.white,           //Jobs list view
+        backgroundColor: Colors.white24, //background of TAJA logo
+        secondaryHeaderColor:
+            Colors.blue, //secondary header for Jobs and Audiobooks
+        cardColor: Colors.white, //Jobs list view
         buttonColor: Colors.black,
       ),
       darkTheme: ThemeData(

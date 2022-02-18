@@ -5,7 +5,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class COVID19Screen extends StatefulWidget {
-  const COVID19Screen({Key key}) : super(key: key);
+  const COVID19Screen({Key? key}) : super(key: key);
   @override
   _COVID19ScreenState createState() => _COVID19ScreenState();
 }

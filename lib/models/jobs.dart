@@ -18,8 +18,8 @@ List<String> jobsCategories = [
 ];
 
 class JobModel {
-  final String description, iconUrl, location, salary, title;
-  final List<String> photos;
+  final String? description, iconUrl, location, salary, title;
+  final List<String>? photos;
 
   JobModel(
       {this.photos,

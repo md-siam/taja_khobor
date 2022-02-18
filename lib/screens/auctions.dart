@@ -7,7 +7,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class AuctionsScreen extends StatelessWidget {
-  const AuctionsScreen({Key key}) : super(key: key);
+  const AuctionsScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final bool displayMobileLayout = MediaQuery.of(context).size.width < 600;
@@ -54,16 +54,16 @@ class AuctionsScreen extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: StaggeredGridView.countBuilder(
+                  child: MasonryGridView.count(
                     primary: false,
                     crossAxisCount: 4,
                     itemCount: auctionsList.length,
                     itemBuilder: (ctx, id) {
                       return AuctionsContainer(id: id);
                     },
-                    staggeredTileBuilder: (int index) {
-                      return StaggeredTile.count(2, index.isEven ? 3 : 2);
-                    },
+                    // staggeredTileBuilder: (int index) {
+                    //   return Tile(2, index.isEven ? 3 : 2);
+                    // },
                   ),
                 ),
               ],

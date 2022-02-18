@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 class JobContainer extends StatelessWidget {
   const JobContainer({
-    Key key,
-    @required this.iconUrl,
-    @required this.title,
-    @required this.location,
-    @required this.description,
-    @required this.salary,
-    @required this.onTap,
+    Key? key,
+    required this.iconUrl,
+    required this.title,
+    required this.location,
+    required this.description,
+    required this.salary,
+    required this.onTap,
   }) : super(key: key);
-  final String iconUrl, title, location, description, salary;
+  final String? iconUrl, title, location, description, salary;
   final Function onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap,
+      onTap: onTap as void Function()?,
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 5.0),
         padding: const EdgeInsets.all(15.0),
@@ -53,7 +53,7 @@ class JobContainer extends StatelessWidget {
                         "$location",
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle1
+                            .subtitle1!
                             .apply(color: Colors.grey),
                       )
                     ],
@@ -65,7 +65,7 @@ class JobContainer extends StatelessWidget {
             Text(
               "$description",
               style:
-                  Theme.of(context).textTheme.bodyText1.apply(color: Colors.grey),
+                  Theme.of(context).textTheme.bodyText1!.apply(color: Colors.grey),
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
             ),
@@ -73,7 +73,7 @@ class JobContainer extends StatelessWidget {
             Text(
               "$salary",
               style:
-                  Theme.of(context).textTheme.subtitle1.apply(fontWeightDelta: 2),
+                  Theme.of(context).textTheme.subtitle1!.apply(fontWeightDelta: 2),
             )
           ],
         ),

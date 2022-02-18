@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../controllers/controllers.dart';
 
 class RatingWidget extends StatelessWidget {
-  final int id;
+  final int? id;
 
-  const RatingWidget({Key key, this.id}) : super(key: key);
+  const RatingWidget({Key? key, this.id}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +22,7 @@ class RatingWidget extends StatelessWidget {
             color: Colors.orange,
           ),
           Text(
-            "${auctionsList[id]['rating']}",
+            "${auctionsList[id!]['rating']}",
             style: TextStyle(color: Colors.orange),
           )
         ],

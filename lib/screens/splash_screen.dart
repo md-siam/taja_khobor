@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../authentications/authentications.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key key}) : super(key: key);
+  const SplashScreen({Key? key}) : super(key: key);
   @override
   _SplashScreen createState() => _SplashScreen();
 }
@@ -42,7 +42,7 @@ class _SplashScreen extends State<SplashScreen> {
                   "Start",
                   style: Theme.of(context)
                       .textTheme
-                      .button
+                      .button!
                       .copyWith(color: Colors.white),
                 ),
                 onPressed: () => Navigator.pushNamed(context, '/home'),
@@ -58,7 +58,7 @@ class _SplashScreen extends State<SplashScreen> {
                     "Create One",
                     style: Theme.of(context)
                         .textTheme
-                        .button
+                        .button!
                         .copyWith(color: Colors.blueAccent),
                   ),
                   onPressed: () {

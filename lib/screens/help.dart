@@ -5,14 +5,14 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class HelpScreen extends StatefulWidget {
-  const HelpScreen({Key key}) : super(key: key);
+  const HelpScreen({Key? key}) : super(key: key);
   @override
   _ChatTwoPageState createState() => _ChatTwoPageState();
 }
 
 class _ChatTwoPageState extends State<HelpScreen> {
-  String text;
-  TextEditingController _controller;
+  String? text;
+  TextEditingController? _controller;
   final List<String> avatars = [
     "assets/images/main/mdsiam.png",
     "assets/images/main/support.png",
@@ -125,15 +125,15 @@ class _ChatTwoPageState extends State<HelpScreen> {
   }
 
   _save() async {
-    if (_controller.text.isEmpty) return;
+    if (_controller!.text.isEmpty) return;
     FocusScope.of(context).requestFocus(FocusNode());
     setState(() {
-      messages.insert(0, Message(rand.nextInt(2), _controller.text));
-      _controller.clear();
+      messages.insert(0, Message(rand.nextInt(2), _controller!.text));
+      _controller!.clear();
     });
   }
 
-  Row _buildMessageRow(Message message, {bool current}) {
+  Row _buildMessageRow(Message message, {required bool current}) {
     return Row(
       mainAxisAlignment:
           current ? MainAxisAlignment.end : MainAxisAlignment.start,

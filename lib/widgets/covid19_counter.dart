@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../controllers/controllers.dart';
 
 class COVID19Counter extends StatelessWidget {
-  final int number;
-  final Color color;
-  final String title;
+  final int? number;
+  final Color? color;
+  final String? title;
   const COVID19Counter({
-    Key key,
+    Key? key,
     this.number,
     this.color,
     this.title,
@@ -23,14 +23,14 @@ class COVID19Counter extends StatelessWidget {
           width: 25,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: color.withOpacity(.26),
+            color: color!.withOpacity(.26),
           ),
           child: Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: Colors.transparent,
               border: Border.all(
-                color: color,
+                color: color!,
                 width: 2,
               ),
             ),
@@ -44,7 +44,7 @@ class COVID19Counter extends StatelessWidget {
             color: color,
           ),
         ),
-        Text(title, style: kSubTextStyle),
+        Text(title!, style: kSubTextStyle),
       ],
     );
   }

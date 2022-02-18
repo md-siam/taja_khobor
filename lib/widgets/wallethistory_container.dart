@@ -4,10 +4,10 @@ import '../models/models.dart';
 class WalletHistoryContainer extends StatelessWidget {
   final int id;
 
-  const WalletHistoryContainer({Key key, @required this.id}) : super(key: key);
+  const WalletHistoryContainer({Key? key, required this.id}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    IconData _icon;
+    IconData? _icon;
     if (historyContainerList[id]['actionType'] == actions.add)
       _icon = Icons.add;
     else if (historyContainerList[id]['actionType'] == actions.receive)
@@ -76,7 +76,7 @@ class WalletHistoryContainer extends StatelessWidget {
             "${historyContainerList[id]['title']}",
             style: Theme.of(context)
                 .textTheme
-                .bodyText1
+                .bodyText1!
                 .apply(fontWeightDelta: 2),
           ),
           Text(

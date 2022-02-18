@@ -9,13 +9,13 @@ List<String> divisionCategories = [
 ];
 
 class Post {
-  String authorName;
-  String authorImageUrl;
-  String timeAgo;
-  String imageUrl;
-  String description;
-  int like;
-  int dislike;
+  String? authorName;
+  String? authorImageUrl;
+  String? timeAgo;
+  String? imageUrl;
+  String? description;
+  int? like;
+  int? dislike;
 
   Post({
     this.authorName,

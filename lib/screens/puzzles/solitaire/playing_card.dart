@@ -36,8 +36,8 @@ class PlayingCard {
   bool opened;
 
   PlayingCard({
-    @required this.cardSuit,
-    @required this.cardType,
+    required this.cardSuit,
+    required this.cardType,
     this.faceUp = false,
     this.opened = false,
   });

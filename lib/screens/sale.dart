@@ -6,7 +6,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class SaleScreen extends StatelessWidget {
-  const SaleScreen({Key key}) : super(key: key);
+  const SaleScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final bool displayMobileLayout = MediaQuery.of(context).size.width < 600;
@@ -86,7 +86,7 @@ class SaleScreen extends StatelessWidget {
 
 class _GridTitleText extends StatelessWidget {
   const _GridTitleText(this.text);
-  final String text;
+  final String? text;
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +94,7 @@ class _GridTitleText extends StatelessWidget {
       fit: BoxFit.scaleDown,
       alignment: AlignmentDirectional.centerStart,
       child: Text(
-        text,
+        text!,
         style: TextStyle(
           fontSize: 14,
           color: Colors.white,
@@ -106,8 +106,8 @@ class _GridTitleText extends StatelessWidget {
 
 class _GridDemoPhotoItem extends StatelessWidget {
   _GridDemoPhotoItem({
-    Key key,
-    @required this.sale_news,
+    Key? key,
+    required this.sale_news,
   }) : super(key: key);
 
   final Sale sale_news;
@@ -129,7 +129,7 @@ class _GridDemoPhotoItem extends StatelessWidget {
         ),
         clipBehavior: Clip.antiAlias,
         child: Image(
-          image: AssetImage(sale_news.imageUrl),
+          image: AssetImage(sale_news.imageUrl!),
           fit: BoxFit.cover,
         ),
       ),

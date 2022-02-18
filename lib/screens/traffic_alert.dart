@@ -4,7 +4,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class TrafficAlertScreen extends StatefulWidget {
-  const TrafficAlertScreen({Key key}) : super(key: key);
+  const TrafficAlertScreen({Key? key}) : super(key: key);
   @override
   _TrafficAlertScreen createState() => _TrafficAlertScreen();
 }

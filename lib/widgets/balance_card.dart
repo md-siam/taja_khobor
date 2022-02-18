@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../theme/theme.dart';
 
 class BalanceCard extends StatelessWidget {
-  const BalanceCard({Key key}) : super(key: key);
+  const BalanceCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

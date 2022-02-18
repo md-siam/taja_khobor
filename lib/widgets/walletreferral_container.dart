@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/models.dart';
 
 class ReferralContainer extends StatelessWidget {
-  final int i;
-  const ReferralContainer({Key key, this.i}) : super(key: key);
+  final int? i;
+  const ReferralContainer({Key? key, this.i}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +13,10 @@ class ReferralContainer extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: Text(
-                "${referrals[i]['name']}",
+                "${referrals[i!]['name']}",
                 style: Theme.of(context)
                     .textTheme
-                    .subtitle1
+                    .subtitle1!
                     .apply(fontWeightDelta: 2),
               ),
             ),
@@ -28,7 +28,7 @@ class ReferralContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15.0),
               ),
               child: Text(
-                "${referrals[i]['status']}",
+                "${referrals[i!]['status']}",
                 style: TextStyle(color: Colors.black),
               ),
             ),
@@ -38,12 +38,12 @@ class ReferralContainer extends StatelessWidget {
         Row(
           children: <Widget>[
             Text("Referral Number: "),
-            Text("${referrals[i]['referral_number']}")
+            Text("${referrals[i!]['referral_number']}")
           ],
         ),
         SizedBox(height: 5),
         Row(
-          children: <Widget>[Text("Type: "), Text("${referrals[i]['type']}")],
+          children: <Widget>[Text("Type: "), Text("${referrals[i!]['type']}")],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,

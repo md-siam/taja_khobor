@@ -4,7 +4,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class NewsScreen extends StatefulWidget {
-  final News news;
+  final News? news;
 
   NewsScreen({this.news});
 
@@ -56,7 +56,7 @@ class _NewsScreenState extends State<NewsScreen> {
     _flutterTts.setVolume(1.0); //max is 1.0
   }
 
-  Future _speak(String text) async {
+  Future _speak(String? text) async {
     if (text != null && text.isNotEmpty) {
       var result = await _flutterTts.speak(text);
       if (result == 1)
@@ -76,7 +76,7 @@ class _NewsScreenState extends State<NewsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    String description = widget.news.description;
+    String? description = widget.news!.description;
 
     return Scaffold(
       body: ListView(
@@ -86,7 +86,7 @@ class _NewsScreenState extends State<NewsScreen> {
               Container(
                 transform: Matrix4.translationValues(0.0, -50.0, 0.0),
                 child: Hero(
-                  tag: widget.news.imageUrl,
+                  tag: widget.news!.imageUrl!,
                   child: ClipShadowPath(
                     clipper: CircularClipper(),
                     shadow: Shadow(blurRadius: 20.0),
@@ -94,7 +94,7 @@ class _NewsScreenState extends State<NewsScreen> {
                       height: 350.0,
                       width: double.infinity,
                       fit: BoxFit.cover,
-                      image: AssetImage(widget.news.imageUrl),
+                      image: AssetImage(widget.news!.imageUrl!),
                     ),
                   ),
                 ),
@@ -179,7 +179,7 @@ class _NewsScreenState extends State<NewsScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  widget.news.title.toUpperCase(),
+                  widget.news!.title!.toUpperCase(),
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -188,7 +188,7 @@ class _NewsScreenState extends State<NewsScreen> {
                 ),
                 SizedBox(height: 10.0),
                 Text(
-                  widget.news.date,
+                  widget.news!.date!,
                   style: TextStyle(fontSize: 16.0),
                 ),
                 SizedBox(height: 25.0),
@@ -197,7 +197,7 @@ class _NewsScreenState extends State<NewsScreen> {
                   height: 300.0,
                   child: SingleChildScrollView(
                     child: Text(
-                      widget.news.description,
+                      widget.news!.description!,
                       style: TextStyle(fontSize: 15.0),
                       textAlign: TextAlign.justify,
                     ),
@@ -207,7 +207,7 @@ class _NewsScreenState extends State<NewsScreen> {
             ),
           ),
           ContentScroll(
-            imageUrl: widget.news.screenshots,
+            imageUrl: widget.news!.screenshots,
             title: 'More Photos',
             imageHeight: 200.0,
             imageWidth: 250.0,

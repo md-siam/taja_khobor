@@ -5,7 +5,7 @@ import 'package:taja_khobor/models/models.dart';
 import 'package:taja_khobor/widgets/widgets.dart';
 
 class GameScreen extends StatefulWidget {
-  const GameScreen({Key key}) : super(key: key);
+  const GameScreen({Key? key}) : super(key: key);
   @override
   _GameScreenState createState() => _GameScreenState();
 }
@@ -106,9 +106,9 @@ class _GameScreenState extends State<GameScreen> {
                         cards: cardColumn1,
                         onCardsAdded: (cards, index) {
                           setState(() {
-                            cardColumn1.addAll(cards);
-                            int length = _getListFromIndex(index).length;
-                            _getListFromIndex(index)
+                            cardColumn1.addAll(cards!);
+                            int length = _getListFromIndex(index!)!.length;
+                            _getListFromIndex(index)!
                                 .removeRange(length - cards.length, length);
                             _refreshList(index);
                           });
@@ -121,9 +121,9 @@ class _GameScreenState extends State<GameScreen> {
                         cards: cardColumn2,
                         onCardsAdded: (cards, index) {
                           setState(() {
-                            cardColumn2.addAll(cards);
-                            int length = _getListFromIndex(index).length;
-                            _getListFromIndex(index)
+                            cardColumn2.addAll(cards!);
+                            int length = _getListFromIndex(index!)!.length;
+                            _getListFromIndex(index)!
                                 .removeRange(length - cards.length, length);
                             _refreshList(index);
                           });
@@ -136,9 +136,9 @@ class _GameScreenState extends State<GameScreen> {
                         cards: cardColumn3,
                         onCardsAdded: (cards, index) {
                           setState(() {
-                            cardColumn3.addAll(cards);
-                            int length = _getListFromIndex(index).length;
-                            _getListFromIndex(index)
+                            cardColumn3.addAll(cards!);
+                            int length = _getListFromIndex(index!)!.length;
+                            _getListFromIndex(index)!
                                 .removeRange(length - cards.length, length);
                             _refreshList(index);
                           });
@@ -151,9 +151,9 @@ class _GameScreenState extends State<GameScreen> {
                         cards: cardColumn4,
                         onCardsAdded: (cards, index) {
                           setState(() {
-                            cardColumn4.addAll(cards);
-                            int length = _getListFromIndex(index).length;
-                            _getListFromIndex(index)
+                            cardColumn4.addAll(cards!);
+                            int length = _getListFromIndex(index!)!.length;
+                            _getListFromIndex(index)!
                                 .removeRange(length - cards.length, length);
                             _refreshList(index);
                           });
@@ -166,9 +166,9 @@ class _GameScreenState extends State<GameScreen> {
                         cards: cardColumn5,
                         onCardsAdded: (cards, index) {
                           setState(() {
-                            cardColumn5.addAll(cards);
-                            int length = _getListFromIndex(index).length;
-                            _getListFromIndex(index)
+                            cardColumn5.addAll(cards!);
+                            int length = _getListFromIndex(index!)!.length;
+                            _getListFromIndex(index)!
                                 .removeRange(length - cards.length, length);
                             _refreshList(index);
                           });
@@ -181,9 +181,9 @@ class _GameScreenState extends State<GameScreen> {
                         cards: cardColumn6,
                         onCardsAdded: (cards, index) {
                           setState(() {
-                            cardColumn6.addAll(cards);
-                            int length = _getListFromIndex(index).length;
-                            _getListFromIndex(index)
+                            cardColumn6.addAll(cards!);
+                            int length = _getListFromIndex(index!)!.length;
+                            _getListFromIndex(index)!
                                 .removeRange(length - cards.length, length);
                             _refreshList(index);
                           });
@@ -196,9 +196,9 @@ class _GameScreenState extends State<GameScreen> {
                         cards: cardColumn7,
                         onCardsAdded: (cards, index) {
                           setState(() {
-                            cardColumn7.addAll(cards);
-                            int length = _getListFromIndex(index).length;
-                            _getListFromIndex(index)
+                            cardColumn7.addAll(cards!);
+                            int length = _getListFromIndex(index!)!.length;
+                            _getListFromIndex(index)!
                                 .removeRange(length - cards.length, length);
                             _refreshList(index);
                           });
@@ -290,9 +290,9 @@ class _GameScreenState extends State<GameScreen> {
               cardSuit: CardSuit.hearts,
               cardsAdded: finalHeartsDeck,
               onCardAdded: (cards, index) {
-                finalHeartsDeck.addAll(cards);
-                int length = _getListFromIndex(index).length;
-                _getListFromIndex(index)
+                finalHeartsDeck.addAll(cards!);
+                int length = _getListFromIndex(index!)!.length;
+                _getListFromIndex(index)!
                     .removeRange(length - cards.length, length);
                 _refreshList(index);
               },
@@ -305,9 +305,9 @@ class _GameScreenState extends State<GameScreen> {
               cardSuit: CardSuit.diamonds,
               cardsAdded: finalDiamondsDeck,
               onCardAdded: (cards, index) {
-                finalDiamondsDeck.addAll(cards);
-                int length = _getListFromIndex(index).length;
-                _getListFromIndex(index)
+                finalDiamondsDeck.addAll(cards!);
+                int length = _getListFromIndex(index!)!.length;
+                _getListFromIndex(index)!
                     .removeRange(length - cards.length, length);
                 _refreshList(index);
               },
@@ -320,9 +320,9 @@ class _GameScreenState extends State<GameScreen> {
               cardSuit: CardSuit.spades,
               cardsAdded: finalSpadesDeck,
               onCardAdded: (cards, index) {
-                finalSpadesDeck.addAll(cards);
-                int length = _getListFromIndex(index).length;
-                _getListFromIndex(index)
+                finalSpadesDeck.addAll(cards!);
+                int length = _getListFromIndex(index!)!.length;
+                _getListFromIndex(index)!
                     .removeRange(length - cards.length, length);
                 _refreshList(index);
               },
@@ -335,9 +335,9 @@ class _GameScreenState extends State<GameScreen> {
               cardSuit: CardSuit.clubs,
               cardsAdded: finalClubsDeck,
               onCardAdded: (cards, index) {
-                finalClubsDeck.addAll(cards);
-                int length = _getListFromIndex(index).length;
-                _getListFromIndex(index)
+                finalClubsDeck.addAll(cards!);
+                int length = _getListFromIndex(index!)!.length;
+                _getListFromIndex(index)!
                     .removeRange(length - cards.length, length);
                 _refreshList(index);
               },
@@ -490,8 +490,8 @@ class _GameScreenState extends State<GameScreen> {
       _handleWin();
     }
     setState(() {
-      if (_getListFromIndex(index).length != 0) {
-        _getListFromIndex(index)[_getListFromIndex(index).length - 1]
+      if (_getListFromIndex(index)!.length != 0) {
+        _getListFromIndex(index)![_getListFromIndex(index)!.length - 1]
           ..opened = true
           ..faceUp = true;
       }
@@ -520,7 +520,7 @@ class _GameScreenState extends State<GameScreen> {
     );
   }
 
-  List<PlayingCard> _getListFromIndex(int index) {
+  List<PlayingCard>? _getListFromIndex(int index) {
     switch (index) {
       case 0:
         return cardDeckOpened;

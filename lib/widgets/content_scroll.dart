@@ -3,10 +3,10 @@ import '../models/models.dart';
 import '../screens/screens.dart';
 
 class ContentScroll extends StatelessWidget {
-  final List<String> imageUrl;
-  final String title;
-  final double imageHeight;
-  final double imageWidth;
+  final List<String>? imageUrl;
+  final String? title;
+  final double? imageHeight;
+  final double? imageWidth;
 
   ContentScroll({
     this.imageUrl,
@@ -25,7 +25,7 @@ class ContentScroll extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                title,
+                title!,
                 style: TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.w600,
@@ -47,7 +47,7 @@ class ContentScroll extends StatelessWidget {
           child: ListView.builder(
             padding: EdgeInsets.symmetric(horizontal: 30.0),
             scrollDirection: Axis.horizontal,
-            itemCount: imageUrl.length,
+            itemCount: imageUrl!.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
                 onTap: () {
@@ -96,7 +96,7 @@ class ContentScroll extends StatelessWidget {
                       children: <Widget>[
                         Positioned.fill(
                           child: Image(
-                            image: AssetImage(imageUrl[index]),
+                            image: AssetImage(imageUrl![index]),
                             fit: BoxFit.cover,
                           ),
                         ),

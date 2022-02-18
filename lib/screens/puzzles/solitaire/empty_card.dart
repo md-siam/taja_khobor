@@ -6,12 +6,12 @@ class EmptyCardDeck extends StatefulWidget {
   final CardSuit cardSuit;
   final List<PlayingCard> cardsAdded;
   final CardAcceptCallback onCardAdded;
-  final int columnIndex;
+  final int? columnIndex;
 
   EmptyCardDeck({
-    @required this.cardSuit,
-    @required this.cardsAdded,
-    @required this.onCardAdded,
+    required this.cardSuit,
+    required this.cardsAdded,
+    required this.onCardAdded,
     this.columnIndex,
   });
 
@@ -58,7 +58,7 @@ class _EmptyCardDeckState extends State<EmptyCardDeck> {
               );
       },
       onWillAccept: (value) {
-        PlayingCard cardAdded = value["cards"].last;
+        PlayingCard cardAdded = value!["cards"].last;
 
         if (cardAdded.cardSuit == widget.cardSuit) {
           if (CardType.values.indexOf(cardAdded.cardType) ==
@@ -78,7 +78,7 @@ class _EmptyCardDeckState extends State<EmptyCardDeck> {
     );
   }
 
-  Image _suitToImage() {
+  Image? _suitToImage() {
     switch (widget.cardSuit) {
       case CardSuit.hearts:
         return Image.asset('assets/images/puzzles/solitaire/hearts.png');

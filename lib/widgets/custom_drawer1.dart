@@ -5,7 +5,7 @@ import '../widgets/widgets.dart';
 
 //custom drawer for android device only
 class AppDrawer extends StatefulWidget {
-  const AppDrawer({@required this.permanentlyDisplay, Key key})
+  const AppDrawer({required this.permanentlyDisplay, Key? key})
       : super(key: key);
 
   final bool permanentlyDisplay;
@@ -15,8 +15,8 @@ class AppDrawer extends StatefulWidget {
 }
 
 class _AppDrawerState extends State<AppDrawer> with RouteAware {
-  String _selectedRoute;
-  AppRouteObserver _routeObserver;
+  String? _selectedRoute;
+  late AppRouteObserver _routeObserver;
   @override
   void initState() {
     super.initState();
@@ -26,7 +26,7 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _routeObserver.subscribe(this, ModalRoute.of(context));
+    _routeObserver.subscribe(this, ModalRoute.of(context) as PageRoute<dynamic>);
   }
 
   @override
@@ -293,7 +293,7 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
 
   void _updateSelectedRoute() {
     setState(() {
-      _selectedRoute = ModalRoute.of(context).settings.name;
+      _selectedRoute = ModalRoute.of(context)!.settings.name;
     });
   }
 }

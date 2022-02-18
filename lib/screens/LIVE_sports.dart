@@ -5,7 +5,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class LIVE_SportsScreen extends StatelessWidget {
-  const LIVE_SportsScreen({Key key}) : super(key: key);
+  const LIVE_SportsScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     var titleTextStyle = TextStyle(

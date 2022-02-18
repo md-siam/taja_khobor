@@ -4,13 +4,13 @@ import '../screens/screens.dart';
 import '../widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  PageController _pageController;
+  PageController? _pageController;
 
   @override
   void initState() {
@@ -20,11 +20,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   _newsSelector(int index) {
     return AnimatedBuilder(
-      animation: _pageController,
-      builder: (BuildContext context, Widget widget) {
+      animation: _pageController!,
+      builder: (BuildContext context, Widget? widget) {
         double value = 1;
-        if (_pageController.position.haveDimensions) {
-          value = _pageController.page - index;
+        if (_pageController!.position.haveDimensions) {
+          value = _pageController!.page! - index;
           value = (1 - (value.abs() * 0.3) + 0.06).clamp(0.0, 1.0);
         }
         return Center(
@@ -59,11 +59,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 child: Center(
                   child: Hero(
-                    tag: breaking_news[index].imageUrl,
+                    tag: breaking_news[index].imageUrl!,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10.0),
                       child: Image(
-                        image: AssetImage(breaking_news[index].imageUrl),
+                        image: AssetImage(breaking_news[index].imageUrl!),
                         height: 220.0,
                         fit: BoxFit.cover,
                       ),
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Container(
                 width: 250.0,
                 child: Text(
-                  breaking_news[index].title.toUpperCase(),
+                  breaking_news[index].title!.toUpperCase(),
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 17.0,

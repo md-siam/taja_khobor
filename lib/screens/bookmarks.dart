@@ -5,7 +5,7 @@ import '../models/models.dart';
 import '../widgets/widgets.dart';
 
 class BookmarksScreen extends StatelessWidget {
-  const BookmarksScreen({Key key}) : super(key: key);
+  const BookmarksScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final bool displayMobileLayout = MediaQuery.of(context).size.width < 600;
@@ -78,7 +78,7 @@ class BookmarksScreen extends StatelessWidget {
 
 class _GridTitleText extends StatelessWidget {
   const _GridTitleText(this.text);
-  final String text;
+  final String? text;
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class _GridTitleText extends StatelessWidget {
       fit: BoxFit.scaleDown,
       alignment: AlignmentDirectional.centerStart,
       child: Text(
-        text,
+        text!,
         style: TextStyle(
           fontSize: 14,
           color: Colors.white,
@@ -98,8 +98,8 @@ class _GridTitleText extends StatelessWidget {
 
 class _GridDemoPhotoItem extends StatelessWidget {
   _GridDemoPhotoItem({
-    Key key,
-    @required this.business_news,
+    Key? key,
+    required this.business_news,
   }) : super(key: key);
 
   final Bookmark business_news;
@@ -121,7 +121,7 @@ class _GridDemoPhotoItem extends StatelessWidget {
         ),
         clipBehavior: Clip.antiAlias,
         child: Image(
-          image: AssetImage(business_news.imageUrl),
+          image: AssetImage(business_news.imageUrl!),
           fit: BoxFit.cover,
         ),
       ),

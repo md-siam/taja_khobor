@@ -43,19 +43,19 @@ class TrafficAlertContainer extends StatelessWidget {
                           child: Image(
                             height: 50.0,
                             width: 50.0,
-                            image: AssetImage(posts[index].authorImageUrl),
+                            image: AssetImage(posts[index].authorImageUrl!),
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
                     ),
                     title: Text(
-                      posts[index].authorName,
+                      posts[index].authorName!,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle: Text(posts[index].timeAgo),
+                    subtitle: Text(posts[index].timeAgo!),
                     trailing: IconButton(
                       icon: Icon(Icons.more_horiz),
                       color: Theme.of(context).cardColor,
@@ -78,7 +78,7 @@ class TrafficAlertContainer extends StatelessWidget {
                             ),
                           ],
                           image: DecorationImage(
-                            image: AssetImage(posts[index].imageUrl),
+                            image: AssetImage(posts[index].imageUrl!),
                             fit: BoxFit.fitWidth,
                           ),
                         ),
@@ -105,7 +105,7 @@ class TrafficAlertContainer extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                posts[index].description,
+                                posts[index].description!,
                                 style: TextStyle(
                                   fontSize: 18,
                                   color: Colors.white,
@@ -167,7 +167,7 @@ class TrafficAlertContainer extends StatelessWidget {
                           onPressed: () => print('Gift'),
                         ),
                         Text(
-                          (posts[index].like - posts[index].dislike).toString(),
+                          (posts[index].like! - posts[index].dislike!).toString(),
                           style: TextStyle(
                             fontSize: 14.0,
                             fontWeight: FontWeight.w600,

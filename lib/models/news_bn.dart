@@ -1,9 +1,9 @@
 class News {
-  String imageUrl;
-  String title;
-  String date;
-  String description;
-  List<String> screenshots;
+  String? imageUrl;
+  String? title;
+  String? date;
+  String? description;
+  List<String>? screenshots;
 
   News({
     this.imageUrl,

@@ -5,9 +5,9 @@ import '../controllers/controllers.dart';
 import '../models/models.dart';
 
 class AuctionDetailsScreen extends StatelessWidget {
-  final int id;
+  final int? id;
 
-  const AuctionDetailsScreen({Key key, this.id}) : super(key: key);
+  const AuctionDetailsScreen({Key? key, this.id}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image(
-                            image: AssetImage(auctionsList[id]['imgurl']),
+                            image: AssetImage(auctionsList[id!]['imgurl']),
                             height: 200,
                           ),
                         ),
@@ -56,7 +56,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "${auctionsList[id]['name']}",
+                                "${auctionsList[id!]['name']}",
                                 style: Theme.of(context).textTheme.headline1,
                               ),
                               Row(
@@ -70,7 +70,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                                     color: Colors.orange,
                                   ),
                                   Text(
-                                    "${auctionsList[id]['rating']}",
+                                    "${auctionsList[id!]['rating']}",
                                     style: TextStyle(color: Colors.orange),
                                   ),
                                 ],
@@ -85,13 +85,13 @@ class AuctionDetailsScreen extends StatelessWidget {
                       "Description",
                       style: Theme.of(context)
                           .textTheme
-                          .headline1
+                          .headline1!
                           .apply(fontWeightDelta: 2),
                     ),
                     SizedBox(height: 7.0),
                     Text(
-                      "${auctionsList[id]['desc']}",
-                      style: Theme.of(context).textTheme.bodyText2.apply(),
+                      "${auctionsList[id!]['desc']}",
+                      style: Theme.of(context).textTheme.bodyText2!.apply(),
                       textAlign: TextAlign.justify,
                     ),
                     SizedBox(height: 15.0),
@@ -99,7 +99,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                       "Screenshots",
                       style: Theme.of(context)
                           .textTheme
-                          .headline1
+                          .headline1!
                           .apply(fontWeightDelta: 2),
                     ),
                     SizedBox(height: 7.0),
@@ -107,7 +107,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                       height: MediaQuery.of(context).size.height / 4,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        itemCount: auctionsList[id]['imgs'].length,
+                        itemCount: auctionsList[id!]['imgs'].length,
                         itemBuilder: (ctx, imgId) {
                           return Container(
                             margin: EdgeInsets.symmetric(horizontal: 9.0),
@@ -116,7 +116,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(15.0),
                               child: Image(
                                 image:
-                                    AssetImage(auctionsList[id]['imgs'][imgId]),
+                                    AssetImage(auctionsList[id!]['imgs'][imgId]),
                                 fit: BoxFit.cover,
                               ),
                             ),

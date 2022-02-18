@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SymptomCard extends StatelessWidget {
-  final String image;
-  final String title;
+  final String? image;
+  final String? title;
   const SymptomCard({
-    Key key,
+    Key? key,
     this.image,
     this.title,
   }) : super(key: key);
@@ -21,9 +21,9 @@ class SymptomCard extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              Image.asset(image, height: 90),
+              Image.asset(image!, height: 90),
               Text(
-                title,
+                title!,
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
@@ -36,11 +36,11 @@ class SymptomCard extends StatelessWidget {
 }
 
 class PreventCard extends StatelessWidget {
-  final String image;
-  final String title;
-  final String text;
+  final String? image;
+  final String? title;
+  final String? text;
   const PreventCard({
-    Key key,
+    Key? key,
     this.image,
     this.title,
     this.text,
@@ -63,7 +63,7 @@ class PreventCard extends StatelessWidget {
                 color: Theme.of(context).cardColor,
               ),
             ),
-            Image.asset(image),
+            Image.asset(image!),
             Positioned(
               left: 130,
               child: Container(
@@ -75,7 +75,7 @@ class PreventCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      title,
+                      title!,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class PreventCard extends StatelessWidget {
                     ),
                     Expanded(
                       child: Text(
-                        text,
+                        text!,
                         textAlign: TextAlign.left,
                         overflow: TextOverflow.visible,
                         style: TextStyle(

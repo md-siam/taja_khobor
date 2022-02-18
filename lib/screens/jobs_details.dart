@@ -6,7 +6,7 @@ import '../controllers/controllers.dart';
 class JobsDetailsScreen extends StatelessWidget {
   final int id;
 
-  const JobsDetailsScreen({Key key, @required this.id}) : super(key: key);
+  const JobsDetailsScreen({Key? key, required this.id}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +81,7 @@ class JobsDetailsScreen extends StatelessWidget {
                       "${jobList[id].location}",
                       style: Theme.of(context)
                           .textTheme
-                          .bodyText2
+                          .bodyText2!
                           .apply(color: Colors.grey),
                     ),
                     SizedBox(
@@ -95,7 +95,7 @@ class JobsDetailsScreen extends StatelessWidget {
                       "${jobList[id].description}",
                       style: Theme.of(context)
                           .textTheme
-                          .bodyText1
+                          .bodyText1!
                           .apply(color: Colors.grey),
                       maxLines: 3,
                       textAlign: TextAlign.justify,
@@ -112,7 +112,7 @@ class JobsDetailsScreen extends StatelessWidget {
                       height: 130,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
-                        itemCount: jobList[id].photos.length,
+                        itemCount: jobList[id].photos!.length,
                         itemBuilder: (ctx, i) {
                           return Padding(
                             padding:
@@ -120,7 +120,7 @@ class JobsDetailsScreen extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10.0),
                               child: Image(
-                                image: AssetImage("${jobList[id].photos[i]}"),
+                                image: AssetImage("${jobList[id].photos![i]}"),
                               ),
                             ),
                           );
@@ -138,7 +138,7 @@ class JobsDetailsScreen extends StatelessWidget {
                           "Submit your CV",
                           style: Theme.of(context)
                               .textTheme
-                              .button
+                              .button!
                               .apply(color: Colors.white),
                         ),
                         color: Colors.blue,
