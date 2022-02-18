@@ -15,7 +15,6 @@ Each year, we are chopping down millions of trees worldwide in the name of produ
 Another major problem with our newspaper is it always starts with a piece of bad news. Who wants to start their day with bad news? In addition to that, a newspaper contains so much irrelevant news that it requires a proper filtration system. Each people are unique & require their own set of news. It's where the machine-learning algorithm comes in, and its job is to filter out news for an individual taste. 
 In conclusion, Taja Khobor application providing a sustainable way of distributing news to everyone. 
 </p>
-TajaKhobor is a platform that will provide news of the people, by the people, for the people. <br>
 
 Note: It's an open-source project; hence anyone can use this code according to the [MIT License](https://choosealicense.com/licenses/mit/) rules & regulations.
 
