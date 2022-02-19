@@ -39,7 +39,7 @@ Note: It's an open-source project; hence anyone can use this code according to t
 // For launching specific URLs<br>
 [url_launcher: ^6.0.20](https://pub.dev/packages/url_launcher)<br>
 // For playing videos<br>
-[video_player: ^2.2.18](https://pub.dev/packages/video_player)<br><br>
+[video_player: ^2.2.18](https://pub.dev/packages/video_player)<br><br><br><br><br><br><br>
 
 # Installation
 
