@@ -1,0 +1,96 @@
+lib
+├── alerts
+│   ├── alerts.dart
+│   ├── login_alert.dart
+│   ├── missing_alert.dart
+│   └── success_alert.dart
+├── authentications
+│   ├── authentications.dart
+│   ├── login.dart
+│   └── signup.dart
+├── controllers
+│   ├── auction_controller.dart
+│   ├── bookmark_controller.dart
+│   ├── controllers.dart
+│   ├── covid19_controller.dart
+│   ├── job_controller.dart
+│   └── sale_controller.dart
+├── models
+│   ├── app_drawer.dart
+│   ├── auctions.dart
+│   ├── bookmarks.dart
+│   ├── covid19.dart
+│   ├── jobs.dart
+│   ├── models.dart
+│   ├── news_bn.dart
+│   ├── news_en.dart
+│   ├── puzzles.dart
+│   ├── sale.dart
+│   ├── sports.dart
+│   ├── stocks.dart
+│   ├── traffic_alert.dart
+│   └── wallet.dart
+├── screens
+│   ├── puzzles
+│   │   ├── solitaire
+│   │   │   ├── card_column.dart
+│   │   │   ├── empty_card.dart
+│   │   │   ├── game_screen.dart
+│   │   │   ├── playing_card.dart
+│   │   │   └── transformed_card.dart
+│   │   └── puzzles_screens.dart
+│   ├── auctions_details.dart
+│   ├── auctions.dart
+│   ├── bhejabilai.dart
+│   ├── bookmarks.dart
+│   ├── covid_19.dart
+│   ├── help.dart
+│   ├── home.dart
+│   ├── jobs_details.dart
+│   ├── jobs.dart
+│   ├── LIVE_sports.dart
+│   ├── news_details.dart
+│   ├── referral_credits.dart
+│   ├── resume.dart
+│   ├── sale.dart
+│   ├── screens.dart
+│   ├── settings.dart
+│   ├── splash_screen.dart
+│   ├── stocks.dart
+│   ├── traffic_alert.dart
+│   ├── transfer_credits.dart
+│   └── wallet.dart
+├── theme
+│   ├── light_color.dart
+│   └── theme.dart
+├── widgets
+│   ├── app_route_observer.dart
+│   ├── auctions_categorymenu.dart
+│   ├── auctions_container.dart
+│   ├── auctions_rating.dart
+│   ├── balance_card.dart
+│   ├── bookmarks_categorymenu.dart
+│   ├── circular_clipper.dart
+│   ├── content_scroll.dart
+│   ├── covid19_cards.dart
+│   ├── covid19_counter.dart
+│   ├── covid19_header.dart
+│   ├── custom_drawer.dart
+│   ├── custom_drawer1.dart
+│   ├── jobs_categorymenu.dart
+│   ├── jobs_container.dart
+│   ├── news_categories.dart
+│   ├── puzzles_categorymenu.dart
+│   ├── sale_categorymenu.dart
+│   ├── sports_categorymenu.dart
+│   ├── stocksList.dart
+│   ├── stocksNewsList.dart
+│   ├── trafficalert_categorymenu.dart
+│   ├── trafficalert_container.dart
+│   ├── wallethistory_container.dart
+│   ├── walletreferral_container.dart
+│   ├── walletstatedetail_container.dart
+│   ├── wallettransaction_container.dart
+│   └── widgets.dart
+├── .DS_Store
+└── main.dart
