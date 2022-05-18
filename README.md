@@ -31,15 +31,15 @@ Note: It's an open-source project; hence anyone can use this code according to t
 // For converting text-to-speech<br>
 [flutter_tts: ^3.3.3](https://pub.dev/packages/flutter_tts)<br>
 // For using awesome icons<br>
-[font_awesome_flutter: ^9.2.0](https://pub.dev/packages/font_awesome_flutter)<br>
+[font_awesome_flutter: ^10.1.0](https://pub.dev/packages/font_awesome_flutter)<br>
 // For using fonts available in google fonts<br>
-[google_fonts: ^2.3.1](https://pub.dev/packages/google_fonts)<br>
+[google_fonts: ^2.3.2](https://pub.dev/packages/google_fonts)<br>
 // For custom pop-up alert<br>
 [rflutter_alert: ^2.0.4](https://pub.dev/packages/rflutter_alert)<br>
 // For launching specific URLs<br>
-[url_launcher: ^6.0.20](https://pub.dev/packages/url_launcher)<br>
+[url_launcher: ^6.1.2](https://pub.dev/packages/url_launcher)<br>
 // For playing videos<br>
-[video_player: ^2.2.18](https://pub.dev/packages/video_player)<br><br><br><br><br><br><br>
+[video_player: ^2.4.2](https://pub.dev/packages/video_player)<br><br><br><br><br><br><br>
 
 ## Installation
 
