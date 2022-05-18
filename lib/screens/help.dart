@@ -51,7 +51,7 @@ class _ChatTwoPageState extends State<HelpScreen> {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.help),
+              title: const Text(ScreenTitles.help),
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
@@ -62,7 +62,7 @@ class _ChatTwoPageState extends State<HelpScreen> {
               children: <Widget>[
                 Expanded(
                   child: ListView.separated(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     separatorBuilder: (context, index) {
                       return const SizedBox(height: 10.0);
                     },
@@ -70,8 +70,9 @@ class _ChatTwoPageState extends State<HelpScreen> {
                     itemCount: messages.length,
                     itemBuilder: (BuildContext context, int index) {
                       Message m = messages[index];
-                      if (m.user == 0)
+                      if (m.user == 0) {
                         return _buildMessageRow(m, current: true);
+                      }
                       return _buildMessageRow(m, current: false);
                     },
                   ),
@@ -116,7 +117,7 @@ class _ChatTwoPageState extends State<HelpScreen> {
             ),
           ),
           IconButton(
-            icon: Icon(FontAwesomeIcons.solidPaperPlane),
+            icon: const Icon(FontAwesomeIcons.solidPaperPlane),
             onPressed: _save,
           )
         ],
@@ -154,7 +155,7 @@ class _ChatTwoPageState extends State<HelpScreen> {
 
         ///Chat bubbles
         Container(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             bottom: 5,
             right: 5,
           ),
@@ -172,12 +173,12 @@ class _ChatTwoPageState extends State<HelpScreen> {
                 decoration: BoxDecoration(
                   color: current ? Colors.blue : Colors.white,
                   borderRadius: current
-                      ? BorderRadius.only(
+                      ? const BorderRadius.only(
                           topLeft: Radius.circular(20),
                           bottomLeft: Radius.circular(20),
                           topRight: Radius.circular(20),
                         )
-                      : BorderRadius.only(
+                      : const BorderRadius.only(
                           topLeft: Radius.circular(20),
                           bottomRight: Radius.circular(20),
                           topRight: Radius.circular(20),
@@ -201,7 +202,7 @@ class _ChatTwoPageState extends State<HelpScreen> {
                           ),
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.done_all,
                         color: Colors.black54,
                         size: 14,
@@ -210,7 +211,7 @@ class _ChatTwoPageState extends State<HelpScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
               ),
               Text(

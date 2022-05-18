@@ -35,7 +35,7 @@ loginAlert(context) {
         DialogButton(
           color: Colors.blue,
           onPressed: () => Navigator.pop(context),
-          child: Text(
+          child: const Text(
             "LOGIN",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),

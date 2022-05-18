@@ -14,7 +14,7 @@ class SymptomCard extends StatelessWidget {
     return Row(
       children: <Widget>[
         Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             color: Theme.of(context).cardColor,
@@ -24,12 +24,12 @@ class SymptomCard extends StatelessWidget {
               Image.asset(image!, height: 90),
               Text(
                 title!,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
           ),
         ),
-        SizedBox(width: 15),
+        const SizedBox(width: 15),
       ],
     );
   }
@@ -67,7 +67,7 @@ class PreventCard extends StatelessWidget {
             Positioned(
               left: 130,
               child: Container(
-                padding: EdgeInsets.only(top: 15, left: 15, right: 40),
+                padding: const EdgeInsets.only(top: 15, left: 15, right: 40),
                 height: 136,
                 width: MediaQuery.of(context).size.width - 170,
                 child: Column(
@@ -76,7 +76,7 @@ class PreventCard extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       title!,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -86,7 +86,7 @@ class PreventCard extends StatelessWidget {
                         text!,
                         textAlign: TextAlign.left,
                         overflow: TextOverflow.visible,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 13,
                         ),
                       ),

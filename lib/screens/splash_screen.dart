@@ -26,7 +26,7 @@ class _SplashScreen extends State<SplashScreen> {
               style: Theme.of(context).textTheme.headline6,
               textAlign: TextAlign.center,
             ),
-            Flexible(
+            const Flexible(
               child: Image(
                 image: AssetImage('assets/images/main/newspaper.png'),
                 width: double.infinity,
@@ -51,8 +51,8 @@ class _SplashScreen extends State<SplashScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account?"),
-                SizedBox(width: 5),
+                const Text("Don't have an account?"),
+                const SizedBox(width: 5),
                 TextButton(
                   child: Text(
                     "Create One",

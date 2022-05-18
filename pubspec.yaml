@@ -43,15 +43,15 @@ dependencies:
   # For converting text-to-speech
   flutter_tts: ^3.3.3
   # For using awesome icons
-  font_awesome_flutter: ^9.2.0
+  font_awesome_flutter: ^10.1.0
   # For using fonts available in google fonts
-  google_fonts: ^2.3.1
+  google_fonts: ^2.3.2
   # For custom pop-up alert
   rflutter_alert: ^2.0.4
   # For launching specific URLs
-  url_launcher: ^6.0.20
+  url_launcher: ^6.1.2
   # For playing videos
-  video_player: ^2.2.18
+  video_player: ^2.4.2
 
 dev_dependencies:
   flutter_test:

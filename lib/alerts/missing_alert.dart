@@ -8,7 +8,7 @@ missingAlert(context) {
       title: "MISSING",
       style: AlertStyle(
         titleStyle: TextStyle(color: Theme.of(context).cardColor),
-        descStyle: TextStyle(color: Colors.grey),
+        descStyle: const TextStyle(color: Colors.grey),
       ),
       desc:
           "Database is not connected. Therefore can't show you the information",
@@ -16,7 +16,7 @@ missingAlert(context) {
         DialogButton(
           color: Colors.blue,
           onPressed: () => Navigator.pop(context),
-          child: Text(
+          child: const Text(
             "CLOSE",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),

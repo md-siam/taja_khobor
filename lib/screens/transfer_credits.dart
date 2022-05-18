@@ -8,21 +8,21 @@ class TransferCreditsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-        title: Text("Transfer ₵redits"),
+        title: const Text("Transfer ₵redits"),
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 15.0),
+        padding: const EdgeInsets.symmetric(horizontal: 15.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
             GridView.builder(
               shrinkWrap: true,
               itemCount: transactionsStat.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 childAspectRatio: 3 / 4,
                 crossAxisSpacing: 15,
                 mainAxisSpacing: 15,
@@ -32,7 +32,7 @@ class TransferCreditsScreen extends StatelessWidget {
                 return StatesDetailContainer(i: id);
               },
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
             Text(
@@ -47,7 +47,7 @@ class TransferCreditsScreen extends StatelessWidget {
               height: 31,
               color: Theme.of(context).cardColor,
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height / 1,
               child: ListView.builder(
                 itemCount: transactions.length,

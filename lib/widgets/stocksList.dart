@@ -4,7 +4,7 @@ import '../models/models.dart';
 class StockList extends StatelessWidget {
   final List<Stock>? stocks;
 
-  StockList({this.stocks});
+  const StockList({this.stocks});
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +12,18 @@ class StockList extends StatelessWidget {
       separatorBuilder: (context, index) {
         return Divider(color: Colors.grey[400]);
       },
-      itemCount: this.stocks!.length,
+      itemCount: stocks!.length,
       itemBuilder: (context, index) {
-        final stock = this.stocks![index];
+        final stock = stocks![index];
 
         return ListTile(
-          contentPadding: EdgeInsets.all(10),
+          contentPadding: const EdgeInsets.all(10),
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
                 "${stock.symbol}",
-                style: TextStyle(
+                style: const TextStyle(
                     //color: Colors.white,
                     fontSize: 24,
                     fontWeight: FontWeight.w500),
@@ -41,7 +41,7 @@ class StockList extends StatelessWidget {
             children: <Widget>[
               Text(
                 "TK ${stock.price}",
-                style: TextStyle(
+                style: const TextStyle(
                     //color: Colors.white,
                     fontSize: 20,
                     fontWeight: FontWeight.w500),
@@ -56,7 +56,7 @@ class StockList extends StatelessWidget {
                 height: 25,
                 child: Text(
                   "-${stock.percentage}%",
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                 ),
               )
             ],

@@ -46,10 +46,10 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             Center(
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+                margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black54,
                       offset: Offset(0.0, 4.0),
@@ -76,11 +76,11 @@ class _HomeScreenState extends State<HomeScreen> {
             Positioned(
               left: 28.0,
               bottom: 28.0,
-              child: Container(
+              child: SizedBox(
                 width: 250.0,
                 child: Text(
                   breaking_news[index].title!.toUpperCase(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 17.0,
                     fontWeight: FontWeight.bold,
@@ -111,14 +111,14 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundColor: Theme.of(context).backgroundColor,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
               elevation: 0.0,
-              title: Image(
+              title: const Image(
                 image: AssetImage('assets/images/main/taja_logo.png'),
               ),
               actions: <Widget>[
                 IconButton(
-                  padding: EdgeInsets.only(right: 25.0),
+                  padding: const EdgeInsets.only(right: 25.0),
                   onPressed: () => print('Search'),
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   iconSize: 25.0,
                   color: Theme.of(context).buttonColor,
                 ),
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
             body: ListView(
               children: <Widget>[
                 //Top slider starts from here
-                Container(
+                SizedBox(
                   height: 280.0,
                   width: double.infinity,
                   child: PageView.builder(
@@ -145,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 //News category starts from here
                 NewsCategories(),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 //Content scrall starts from here
                 ContentScroll(
                   imageUrl: trending_pic,
@@ -153,14 +153,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   imageHeight: 250.0,
                   imageWidth: 150.0,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 ContentScroll(
                   imageUrl: recent_pic,
                   title: 'Recent',
                   imageHeight: 250.0,
                   imageWidth: 150.0,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 ContentScroll(
                   imageUrl: tech_pic,
                   title: 'Technology',

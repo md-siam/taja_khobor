@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taja_khobor/screens/puzzles/puzzles_screens.dart';
+import '../puzzles_screens.dart';
 
 // TransformedCard makes the card draggable and translates it according to
 // position in the stack.
@@ -10,7 +10,7 @@ class TransformedCard extends StatefulWidget {
   final int? columnIndex;
   final List<PlayingCard>? attachedCards;
 
-  TransformedCard({
+  const TransformedCard({
     required this.playingCard,
     this.transformDistance = 15.0,
     this.transformIndex = 0,
@@ -82,13 +82,13 @@ class _TransformedCardState extends State<TransformedCard> {
                   Center(
                     child: Text(
                       _cardTypeToString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 16.0,
                       ),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     height: 20.0,
                     child: _suitToImage(),
                   )
@@ -105,12 +105,12 @@ class _TransformedCardState extends State<TransformedCard> {
                   children: <Widget>[
                     Text(
                       _cardTypeToString(),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 10.0,
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: 10.0,
                       child: _suitToImage(),
                     )

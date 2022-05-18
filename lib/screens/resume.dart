@@ -22,10 +22,10 @@ class ResumeScreen extends StatelessWidget {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.resume),
+              title: const Text(ScreenTitles.resume),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.edit_outlined,
                   ),
                   onPressed: () => loginAlert(context),
@@ -41,29 +41,29 @@ class ResumeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   _buildHeader(),
                   Container(
                     margin: const EdgeInsets.all(16.0),
                     padding: const EdgeInsets.all(16.0),
-                    child: Text(
+                    child: const Text(
                         'For the past year, I have been working as a full-time freelance software developer, and my specialty is on web design & development, content management systems (CMS), E-Commerce, etc. Before that, I worked as a research assistant under a North South University teacher & published my research paper on water quality monitoring system, at the University of Indonesia, Jakarta. In addition to that, I have a BSc degree in Computer Science & Engineering from North South University and receive the best project award from the "Capstone Project Showcase" competition, organized by ACM Student Chapter, NSU.',
                         textAlign: TextAlign.justify),
                   ),
                   _buildTitle("Skills"),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   _buildSkillRow("HTML", 0.90),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   _buildSkillRow("CSS", 0.75),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   _buildSkillRow("JavaScript", 0.65),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   _buildSkillRow("Flutter", 0.85),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   _buildSkillRow("Dart", 0.76),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   _buildSkillRow("Adobe XD", 0.5),
-                  SizedBox(height: 30.0),
+                  const SizedBox(height: 30.0),
                   _buildTitle("Experience"),
                   _buildExperienceRow(
                     company: "TajaKhobor.news",
@@ -80,9 +80,9 @@ class ResumeScreen extends StatelessWidget {
                     position: "Research Assistant",
                     duration: "2018 - 2019",
                   ),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   _buildTitle("Award"),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   _buildExperienceRow(
                     company: "IEEE IRC-STF Travel Grant, R10HTC 2019",
                     position: "University of Indonesia, Jakarta",
@@ -99,9 +99,9 @@ class ResumeScreen extends StatelessWidget {
                     position: "North South University",
                     duration: "2018",
                   ),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   _buildTitle("Education"),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   _buildExperienceRow(
                     company: "North South University",
                     position: "B.Sc. Computer Science and Engineering",
@@ -115,11 +115,11 @@ class ResumeScreen extends StatelessWidget {
                       company: "Manarat Dhaka International College",
                       position: "O Level",
                       duration: "2009 - 2010"),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                   _buildTitle("Contact"),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   Row(
-                    children: <Widget>[
+                    children: const <Widget>[
                       SizedBox(width: 30.0),
                       Icon(
                         Icons.mail,
@@ -131,9 +131,9 @@ class ResumeScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   Row(
-                    children: <Widget>[
+                    children: const <Widget>[
                       SizedBox(width: 30.0),
                       Icon(
                         Icons.phone,
@@ -146,7 +146,7 @@ class ResumeScreen extends StatelessWidget {
                     ],
                   ),
                   _buildSocialsRow(),
-                  SizedBox(height: 20.0),
+                  const SizedBox(height: 20.0),
                 ],
               ),
             ),
@@ -159,31 +159,31 @@ class ResumeScreen extends StatelessWidget {
   Row _buildSocialsRow() {
     return Row(
       children: <Widget>[
-        SizedBox(width: 20.0),
+        const SizedBox(width: 20.0),
         IconButton(
           color: Colors.blue,
-          icon: Icon(FontAwesomeIcons.linkedin),
+          icon: const Icon(FontAwesomeIcons.linkedin),
           onPressed: () {
             _launchURL("https://www.linkedin.com/in/md-siam-09703b184/");
           },
         ),
-        SizedBox(width: 5.0),
+        const SizedBox(width: 5.0),
         IconButton(
           color: Colors.indigo,
-          icon: Icon(FontAwesomeIcons.github),
+          icon: const Icon(FontAwesomeIcons.github),
           onPressed: () {
             _launchURL("https://github.com/md-siam");
           },
         ),
-        SizedBox(width: 5.0),
+        const SizedBox(width: 5.0),
         IconButton(
           color: Colors.teal,
-          icon: Icon(FontAwesomeIcons.globeAmericas),
+          icon: const Icon(FontAwesomeIcons.globeAmericas),
           onPressed: () {
             _launchURL("https://mdsiam.xyz/");
           },
         ),
-        SizedBox(width: 10.0),
+        const SizedBox(width: 10.0),
       ],
     );
   }
@@ -199,8 +199,8 @@ class ResumeScreen extends StatelessWidget {
   ListTile _buildExperienceRow(
       {required String company, String? position, String? duration}) {
     return ListTile(
-      leading: Padding(
-        padding: const EdgeInsets.only(top: 8.0, left: 20.0),
+      leading: const Padding(
+        padding: EdgeInsets.only(top: 8.0, left: 20.0),
         child: Icon(
           FontAwesomeIcons.solidCircle,
           size: 12.0,
@@ -216,23 +216,23 @@ class ResumeScreen extends StatelessWidget {
   Row _buildSkillRow(String skill, double level) {
     return Row(
       children: <Widget>[
-        SizedBox(width: 16.0),
+        const SizedBox(width: 16.0),
         Expanded(
             flex: 2,
             child: Text(
               skill.toUpperCase(),
               textAlign: TextAlign.right,
             )),
-        SizedBox(width: 10.0),
+        const SizedBox(width: 10.0),
         Expanded(
           flex: 5,
           child: LinearProgressIndicator(
             backgroundColor: Colors.grey,
             value: level,
-            valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            valueColor: const AlwaysStoppedAnimation<Color>(Colors.blue),
           ),
         ),
-        SizedBox(width: 16.0),
+        const SizedBox(width: 16.0),
       ],
     );
   }
@@ -245,9 +245,9 @@ class ResumeScreen extends StatelessWidget {
         children: <Widget>[
           Text(
             title.toUpperCase(),
-            style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
           ),
-          Divider(
+          const Divider(
               //color: Colors.tealAccent,
               ),
         ],
@@ -258,8 +258,8 @@ class ResumeScreen extends StatelessWidget {
   Row _buildHeader() {
     return Row(
       children: <Widget>[
-        SizedBox(width: 20.0),
-        Container(
+        const SizedBox(width: 20.0),
+        const SizedBox(
           width: 80.0,
           height: 80.0,
           child: CircleAvatar(
@@ -272,19 +272,19 @@ class ResumeScreen extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 20.0),
+        const SizedBox(width: 20.0),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               "Md.Siam",
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10.0),
-            Text("Full-Stack Software Developer"),
-            SizedBox(height: 5.0),
+            const SizedBox(height: 10.0),
+            const Text("Full-Stack Software Developer"),
+            const SizedBox(height: 5.0),
             Row(
-              children: <Widget>[
+              children: const <Widget>[
                 Icon(
                   FontAwesomeIcons.map,
                   size: 12.0,

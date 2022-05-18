@@ -7,7 +7,7 @@ class SignupPage extends StatelessWidget {
     return Container(
       child: ListView(
         children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 30.0,
           ),
           _buildLoginForm(context),
@@ -18,16 +18,16 @@ class SignupPage extends StatelessWidget {
 
   Container _buildLoginForm(context) {
     return Container(
-      padding: EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(20.0),
       child: Stack(
         children: <Widget>[
           ClipPath(
             clipper: RoundedDiagonalPathClipper(),
             child: Container(
               height: 400,
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(40.0),
                 ),
                 color: Theme.of(context).cardColor,
@@ -35,11 +35,11 @@ class SignupPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(
+                  const SizedBox(
                     height: 90.0,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "01700000000",
@@ -54,10 +54,10 @@ class SignupPage extends StatelessWidget {
                       color: Colors.blue.shade400,
                     ),
                     padding:
-                        EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Password",
@@ -72,10 +72,10 @@ class SignupPage extends StatelessWidget {
                       color: Colors.blue.shade400,
                     ),
                     padding:
-                        EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Confirm password",
@@ -88,9 +88,9 @@ class SignupPage extends StatelessWidget {
                   Container(
                     child: Divider(color: Colors.blue.shade400),
                     padding:
-                        EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
                 ],
@@ -110,7 +110,7 @@ class SignupPage extends StatelessWidget {
               ),
             ],
           ),
-          Container(
+          SizedBox(
             height: 420,
             child: Align(
               alignment: Alignment.bottomCenter,
@@ -119,7 +119,7 @@ class SignupPage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(40.0),
                 ),
-                child: Text(
+                child: const Text(
                   "Sign Up",
                   style: TextStyle(color: Colors.white),
                 ),
@@ -136,7 +136,7 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign Up"),
+        title: const Text("Sign Up"),
         iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
       ),
       body: _buildPageContent(context),

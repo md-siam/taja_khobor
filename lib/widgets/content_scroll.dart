@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/models.dart';
 import '../screens/screens.dart';
 
@@ -8,7 +9,7 @@ class ContentScroll extends StatelessWidget {
   final double? imageHeight;
   final double? imageWidth;
 
-  ContentScroll({
+  const ContentScroll({
     this.imageUrl,
     this.title,
     this.imageHeight,
@@ -20,13 +21,13 @@ class ContentScroll extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40.0),
+          padding: const EdgeInsets.symmetric(horizontal: 40.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
                 title!,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -42,10 +43,10 @@ class ContentScroll extends StatelessWidget {
             ],
           ),
         ),
-        Container(
+        SizedBox(
           height: imageHeight,
           child: ListView.builder(
-            padding: EdgeInsets.symmetric(horizontal: 30.0),
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
             scrollDirection: Axis.horizontal,
             itemCount: imageUrl!.length,
             itemBuilder: (BuildContext context, int index) {
@@ -75,14 +76,14 @@ class ContentScroll extends StatelessWidget {
                   }
                 },
                 child: Container(
-                  margin: EdgeInsets.symmetric(
+                  margin: const EdgeInsets.symmetric(
                     horizontal: 10.0,
                     vertical: 20.0,
                   ),
                   width: imageWidth,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.black54,
                         offset: Offset(0.0, 4.0),
@@ -105,8 +106,8 @@ class ContentScroll extends StatelessWidget {
                           left: 0,
                           right: 0,
                           child: Container(
-                            padding: EdgeInsets.all(9.0),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.all(9.0),
+                            decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 begin: Alignment.topCenter,
                                 end: Alignment.bottomCenter,
@@ -120,7 +121,7 @@ class ContentScroll extends StatelessWidget {
                                   (Text(
                                     '${trending_news[index].title}',
                                     //"Test",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 14,
                                       color: Colors.white,
                                     ),
@@ -129,7 +130,7 @@ class ContentScroll extends StatelessWidget {
                                   (Text(
                                     '${recent_news[index].title}',
                                     //"Test",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 14,
                                       color: Colors.white,
                                     ),
@@ -138,12 +139,12 @@ class ContentScroll extends StatelessWidget {
                                   (Text(
                                     '${technology[index].title}',
                                     //"Test",
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontSize: 14,
                                       color: Colors.white,
                                     ),
                                   )),
-                                SizedBox(height: 5.0),
+                                const SizedBox(height: 5.0),
                               ],
                             ),
                           ),

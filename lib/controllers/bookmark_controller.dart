@@ -1,4 +1,4 @@
-import 'package:taja_khobor/models/bookmarks.dart';
+import '../models/bookmarks.dart';
 
 List<Bookmark> business_news() {
   return [

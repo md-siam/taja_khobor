@@ -9,7 +9,7 @@ class BalanceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(40)),
+        borderRadius: const BorderRadius.all(Radius.circular(40)),
         child: Container(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * .35,
@@ -21,14 +21,14 @@ class BalanceCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'Total ₵redits,',
                     style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                         color: LightColor.lightNavyBlue),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
@@ -60,7 +60,7 @@ class BalanceCard extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                             color: LightColor.lightNavyBlue),
                       ),
-                      Text(
+                      const Text(
                         ' BDT 6,354',
                         style: TextStyle(
                             fontSize: 15,
@@ -69,19 +69,19 @@ class BalanceCard extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Container(
                       width: 120,
                       padding:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                          const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(12)),
+                          borderRadius: const BorderRadius.all(Radius.circular(12)),
                           border: Border.all(color: Colors.white, width: 1)),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
+                        children: const <Widget>[
                           Icon(
                             Icons.call_missed_outgoing_sharp,
                             color: Colors.white,
@@ -94,7 +94,7 @@ class BalanceCard extends StatelessWidget {
                       ))
                 ],
               ),
-              Positioned(
+              const Positioned(
                 left: -170,
                 top: -170,
                 child: CircleAvatar(
@@ -102,7 +102,7 @@ class BalanceCard extends StatelessWidget {
                   backgroundColor: LightColor.lightBlue2,
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: -160,
                 top: -190,
                 child: CircleAvatar(
@@ -110,7 +110,7 @@ class BalanceCard extends StatelessWidget {
                   backgroundColor: LightColor.lightBlue1,
                 ),
               ),
-              Positioned(
+              const Positioned(
                 right: -170,
                 bottom: -170,
                 child: CircleAvatar(
@@ -118,7 +118,7 @@ class BalanceCard extends StatelessWidget {
                   backgroundColor: LightColor.yellow2,
                 ),
               ),
-              Positioned(
+              const Positioned(
                 right: -160,
                 bottom: -190,
                 child: CircleAvatar(

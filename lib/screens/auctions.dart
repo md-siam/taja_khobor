@@ -23,10 +23,10 @@ class AuctionsScreen extends StatelessWidget {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.auctions),
+              title: const Text(ScreenTitles.auctions),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.add,
                     size: 28,
                   ),
@@ -42,7 +42,7 @@ class AuctionsScreen extends StatelessWidget {
             body: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Theme.of(context).secondaryHeaderColor,
                   child: Column(
                     children: <Widget>[

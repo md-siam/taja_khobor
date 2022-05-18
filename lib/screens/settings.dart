@@ -60,9 +60,9 @@ class SettingsScreen extends StatelessWidget {
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.lock),
-                          title: Text("Change Password"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.lock),
+                          title: const Text("Change Password"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Change password'); //open change password
                           },
@@ -71,25 +71,25 @@ class SettingsScreen extends StatelessWidget {
                         ListTile(
                           leading: const Icon(FontAwesomeIcons.userCog),
                           title:const  Text("User Configuration"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('User Configuration'); //open change password
                           },
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.mapMarkedAlt),
-                          title: Text("Change Location"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.mapMarkedAlt),
+                          title: const Text("Change Location"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Change location'); //open change location
                           },
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.textHeight),
-                          title: Text("Text Size"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.textHeight),
+                          title: const Text("Text Size"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Text Size'); //open change location
                           },
@@ -98,7 +98,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20.0),
-                  Text(
+                  const Text(
                     "TTS",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -116,36 +116,36 @@ class SettingsScreen extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.language),
-                          title: Text("Language"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.language),
+                          title: const Text("Language"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Language'); //open change language
                           },
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.volumeUp),
-                          title: Text("Volume"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.volumeUp),
+                          title: const Text("Volume"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Volume'); //set default volume
                           },
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.magic),
-                          title: Text("Pitch"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.magic),
+                          title: const Text("Pitch"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Pitch'); //set default pitch
                           },
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.tachometerAlt),
-                          title: Text("Speed"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.tachometerAlt),
+                          title: const Text("Speed"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Speed'); //set default speed
                           },
@@ -154,7 +154,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20.0),
-                  Text(
+                  const Text(
                     "Cache",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -172,27 +172,27 @@ class SettingsScreen extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.solidImage),
-                          title: Text("App Image Quality"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.solidImage),
+                          title: const Text("App Image Quality"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('App Image Quality'); //open change language
                           },
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.film),
-                          title: Text("App Video Preferences"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.film),
+                          title: const Text("App Video Preferences"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('App Video Preferences'); //set default volume
                           },
                         ),
                         _buildDivider(),
                         ListTile(
-                          leading: Icon(FontAwesomeIcons.solidTrashAlt),
-                          title: Text("Clear Cache"),
-                          trailing: Icon(Icons.keyboard_arrow_right),
+                          leading: const Icon(FontAwesomeIcons.solidTrashAlt),
+                          title: const Text("Clear Cache"),
+                          trailing: const Icon(Icons.keyboard_arrow_right),
                           onTap: () {
                             print('Clear Cache'); //set default pitch
                           },
@@ -201,7 +201,7 @@ class SettingsScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 20.0),
-                  Text(
+                  const Text(
                     "THEMES",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -225,10 +225,10 @@ class SettingsScreen extends StatelessWidget {
                           onChanged: (val) {},
                         ),
                         _buildDivider(),
-                        SwitchListTile.adaptive(
+                        const SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: false,
-                          title: const Text("Dark Mode"),
+                          title: Text("Dark Mode"),
                           onChanged: null,
                         ),
                       ],
@@ -237,7 +237,7 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: 20.0),
                   const Text(
                     "PUSH NOTIFICATIONS",
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20.0,
                     ),
@@ -264,10 +264,10 @@ class SettingsScreen extends StatelessWidget {
                           onChanged: (val) {},
                         ),
                         _buildDivider(),
-                        SwitchListTile.adaptive(
+                        const SwitchListTile.adaptive(
                           activeColor: Colors.blue,
                           value: false,
-                          title: const Text("Received Offer Notification"),
+                          title: Text("Received Offer Notification"),
                           onChanged: null,
                         ),
                         _buildDivider(),
@@ -287,7 +287,7 @@ class SettingsScreen extends StatelessWidget {
                       horizontal: 0,
                     ),
                     child: ListTile(
-                      leading: Icon(FontAwesomeIcons.signOutAlt),
+                      leading: const Icon(FontAwesomeIcons.signOutAlt),
                       title: const Text("Logout"),
                       onTap: () {
                         print('Logout'); //logout

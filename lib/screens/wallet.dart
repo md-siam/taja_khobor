@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import '../models/models.dart';
-import '../widgets/widgets.dart';
 import '../screens/screens.dart';
+import '../widgets/widgets.dart';
 
 class WalletScreen extends StatelessWidget {
   const WalletScreen({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class WalletScreen extends StatelessWidget {
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
               elevation: 0,
-              title: Text(ScreenTitles.wallet),
+              title: const Text(ScreenTitles.wallet),
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
@@ -29,14 +30,14 @@ class WalletScreen extends StatelessWidget {
                   )
                 : null,
             body: SingleChildScrollView(
-              padding: EdgeInsets.all(15.0),
+              padding: const EdgeInsets.all(15.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  SizedBox(height: 5.0),
-                  BalanceCard(),
+                  const SizedBox(height: 5.0),
+                  const BalanceCard(),
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 15.0),
+                    margin: const EdgeInsets.symmetric(vertical: 15.0),
                     height: MediaQuery.of(context).size.height / 4,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -70,7 +71,7 @@ class WalletScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Divider(
+                  const Divider(
                     height: 31,
                     //color: Theme.of(context).cardColor,
                   ),
@@ -109,12 +110,12 @@ class WalletScreen extends StatelessWidget {
                             ),
                             RaisedButton(
                               color: lightBlue,
-                              child: Text(
+                              child: const Text(
                                 "View",
                                 style: TextStyle(color: Colors.white),
                               ),
                               shape: RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(9.0),
+                                borderRadius: BorderRadius.circular(9.0),
                               ),
                               onPressed: () {
                                 Navigator.push(
@@ -131,7 +132,7 @@ class WalletScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Divider(height: 30),
+                  const Divider(height: 30),
                   Row(
                     children: <Widget>[
                       Flexible(
@@ -167,12 +168,12 @@ class WalletScreen extends StatelessWidget {
                             ),
                             RaisedButton(
                               color: lightBlue,
-                              child: Text(
+                              child: const Text(
                                 "View",
                                 style: TextStyle(color: Colors.white),
                               ),
                               shape: RoundedRectangleBorder(
-                                borderRadius: new BorderRadius.circular(9.0),
+                                borderRadius: BorderRadius.circular(9.0),
                               ),
                               onPressed: () {
                                 Navigator.push(

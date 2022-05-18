@@ -25,10 +25,10 @@ class _TrafficAlertScreen extends State<TrafficAlertScreen> {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.traffic_alert),
+              title: const Text(ScreenTitles.traffic_alert),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.add,
                     size: 28,
                   ),
@@ -44,7 +44,7 @@ class _TrafficAlertScreen extends State<TrafficAlertScreen> {
             body: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Theme.of(context).secondaryHeaderColor,
                   child: Column(
                     children: <Widget>[
@@ -57,9 +57,9 @@ class _TrafficAlertScreen extends State<TrafficAlertScreen> {
                 ),
                 Expanded(
                   child: ListView(
-                    physics: AlwaysScrollableScrollPhysics(),
+                    physics: const AlwaysScrollableScrollPhysics(),
                     children: <Widget>[
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 20.0),
                       ),
                       TrafficAlertContainer(0),

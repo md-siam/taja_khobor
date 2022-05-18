@@ -10,7 +10,7 @@ class TrafficAlertContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
       child: Container(
         width: double.infinity,
         height: 560.0,
@@ -21,14 +21,14 @@ class TrafficAlertContainer extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.0),
+              padding: const EdgeInsets.symmetric(vertical: 10.0),
               child: Column(
                 children: <Widget>[
                   ListTile(
                     leading: Container(
                       width: 50.0,
                       height: 50.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
                         boxShadow: [
                           BoxShadow(
@@ -51,13 +51,13 @@ class TrafficAlertContainer extends StatelessWidget {
                     ),
                     title: Text(
                       posts[index].authorName!,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     subtitle: Text(posts[index].timeAgo!),
                     trailing: IconButton(
-                      icon: Icon(Icons.more_horiz),
+                      icon: const Icon(Icons.more_horiz),
                       color: Theme.of(context).cardColor,
                       onPressed: () => print('More'),
                     ),
@@ -65,12 +65,12 @@ class TrafficAlertContainer extends StatelessWidget {
                   Stack(
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.all(10.0),
+                        margin: const EdgeInsets.all(10.0),
                         width: double.infinity,
                         height: 400.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(25.0),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.black45,
                               offset: Offset(0, 5),
@@ -88,9 +88,9 @@ class TrafficAlertContainer extends StatelessWidget {
                         left: 0,
                         right: 0,
                         child: Container(
-                          margin: EdgeInsets.all(10.0),
-                          padding: EdgeInsets.all(9.0),
-                          decoration: BoxDecoration(
+                          margin: const EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(9.0),
+                          decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(
                               bottomRight: Radius.circular(25.0),
                               bottomLeft: Radius.circular(25.0),
@@ -106,12 +106,12 @@ class TrafficAlertContainer extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 posts[index].description!,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 18,
                                   color: Colors.white,
                                 ),
                               ),
-                              SizedBox(height: 5.0),
+                              const SizedBox(height: 5.0),
                             ],
                           ),
                         ),
@@ -119,7 +119,7 @@ class TrafficAlertContainer extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -128,30 +128,30 @@ class TrafficAlertContainer extends StatelessWidget {
                             Row(
                               children: <Widget>[
                                 IconButton(
-                                  icon: Icon(FontAwesomeIcons.thumbsUp),
+                                  icon: const Icon(FontAwesomeIcons.thumbsUp),
                                   //iconSize: 30.0,
                                   onPressed: () => print('Like post'),
                                 ),
                                 Text(
                                   (posts[index].like).toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ],
                             ),
-                            SizedBox(width: 20.0),
+                            const SizedBox(width: 20.0),
                             Row(
                               children: <Widget>[
                                 IconButton(
-                                  icon: Icon(FontAwesomeIcons.thumbsDown),
+                                  icon: const Icon(FontAwesomeIcons.thumbsDown),
                                   //iconSize: 30.0,
                                   onPressed: () => print('Dislike post'),
                                 ),
                                 Text(
                                   (posts[index].dislike).toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -160,15 +160,15 @@ class TrafficAlertContainer extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(width: 60.0),
+                        const SizedBox(width: 60.0),
                         IconButton(
-                          icon: Icon(FontAwesomeIcons.gift),
+                          icon: const Icon(FontAwesomeIcons.gift),
                           //iconSize: 30.0,
                           onPressed: () => print('Gift'),
                         ),
                         Text(
                           (posts[index].like! - posts[index].dislike!).toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 14.0,
                             fontWeight: FontWeight.w600,
                           ),

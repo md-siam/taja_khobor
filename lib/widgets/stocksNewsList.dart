@@ -28,17 +28,17 @@ class _StocksNewsListState extends State<StocksNewsList> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onVerticalDragUpdate: this.widget.onPanUpdate,
-      onTap: this.widget.onHeaderTapped as void Function()?,
+      onVerticalDragUpdate: widget.onPanUpdate,
+      onTap: widget.onHeaderTapped as void Function()?,
       child: Container(
         decoration: BoxDecoration(
           color: Colors.grey[900],
-          borderRadius: BorderRadius.only(
-            topLeft: const Radius.circular(16.0),
-            topRight: const Radius.circular(16.0),
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(16.0),
+            topRight: Radius.circular(16.0),
           ),
         ),
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         width: MediaQuery.of(context).size.width,
         height: 800,
         child: Column(
@@ -46,7 +46,7 @@ class _StocksNewsListState extends State<StocksNewsList> {
           children: <Widget>[
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+              children: const <Widget>[
                 Text(
                   "Business News",
                   style: TextStyle(
@@ -70,9 +70,9 @@ class _StocksNewsListState extends State<StocksNewsList> {
                 itemCount: 8,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    contentPadding: EdgeInsets.all(10),
+                    contentPadding: const EdgeInsets.all(10),
                     title: Wrap(
-                      children: <Widget>[
+                      children: const <Widget>[
                         Text(
                           "DHAKA STOCK EXCHANGE",
                           style: TextStyle(

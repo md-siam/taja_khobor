@@ -8,7 +8,7 @@ successAlert(context) {
       title: "SUCCESS",
       style: AlertStyle(
         titleStyle: TextStyle(color: Theme.of(context).buttonColor),
-        descStyle: TextStyle(color: Colors.grey),
+        descStyle: const TextStyle(color: Colors.grey),
       ),
       desc:
           "Your request has been successfully submitted, and you will receive a confirmation SMS shortly.",
@@ -16,7 +16,7 @@ successAlert(context) {
         DialogButton(
           color: Colors.blue,
           onPressed: () => Navigator.pop(context),
-          child: Text(
+          child: const Text(
             "COOL",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),

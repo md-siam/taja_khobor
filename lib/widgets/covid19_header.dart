@@ -22,10 +22,10 @@ class _COVID19HeaderState extends State<COVID19Header> {
     return ClipPath(
       clipper: COVIS19Clipper(),
       child: Container(
-        padding: EdgeInsets.only(left: 40, top: 50, right: 20),
+        padding: const EdgeInsets.only(left: 40, top: 50, right: 20),
         height: 350,
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topRight,
             end: Alignment.bottomLeft,
@@ -41,7 +41,7 @@ class _COVID19HeaderState extends State<COVID19Header> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Expanded(
               child: Stack(
                 children: <Widget>[

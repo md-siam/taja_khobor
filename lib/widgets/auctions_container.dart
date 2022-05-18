@@ -21,7 +21,7 @@ class AuctionsContainer extends StatelessWidget {
         );
       },
       child: Container(
-        margin: EdgeInsets.all(9.0),
+        margin: const EdgeInsets.all(9.0),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(15.0),
           child: Stack(
@@ -37,8 +37,8 @@ class AuctionsContainer extends StatelessWidget {
                 left: 0,
                 right: 0,
                 child: Container(
-                  padding: EdgeInsets.all(9.0),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(9.0),
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -50,12 +50,12 @@ class AuctionsContainer extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         '${auctionsList[id!]["name"]}',
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 18,
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 5.0),
+                      const SizedBox(height: 5.0),
                       //RatingWidget(id: id),
                     ],
                   ),

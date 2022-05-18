@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../models/models.dart';
 import '../widgets/widgets.dart';
@@ -8,11 +7,11 @@ class LIVE_SportsScreen extends StatelessWidget {
   const LIVE_SportsScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    var titleTextStyle = TextStyle(
+    var titleTextStyle = const TextStyle(
       fontSize: 20.0,
       fontWeight: FontWeight.bold,
     );
-    var teamNameTextStyle = TextStyle(
+    var teamNameTextStyle = const TextStyle(
       fontSize: 18.0,
       fontWeight: FontWeight.w500,
     );
@@ -29,7 +28,7 @@ class LIVE_SportsScreen extends StatelessWidget {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.LIVE_sports),
+              title: const Text(ScreenTitles.LIVE_sports),
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
@@ -39,7 +38,7 @@ class LIVE_SportsScreen extends StatelessWidget {
             body: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Theme.of(context).secondaryHeaderColor,
                   child: Column(
                     children: <Widget>[
@@ -65,11 +64,11 @@ class LIVE_SportsScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(16.0),
                           child: Row(
                             children: <Widget>[
-                              CircleAvatar(
+                              const CircleAvatar(
                                 backgroundImage: ExactAssetImage(
                                     "assets/images/LIVE_Sports/flags/bangladesh.png"),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: <Widget>[
@@ -78,7 +77,7 @@ class LIVE_SportsScreen extends StatelessWidget {
                                     style: teamNameTextStyle,
                                   ),
                                   const SizedBox(height: 5.0),
-                                  Text(
+                                  const Text(
                                     "329/6",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
@@ -87,8 +86,8 @@ class LIVE_SportsScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(
+                              const Padding(
+                                padding: EdgeInsets.only(
                                     top: 20.0, left: 20.0, right: 20.0),
                                 child: Text(
                                   ":",
@@ -106,7 +105,7 @@ class LIVE_SportsScreen extends StatelessWidget {
                                     style: teamNameTextStyle,
                                   ),
                                   const SizedBox(height: 5.0),
-                                  Text(
+                                  const Text(
                                     "250/10",
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
@@ -115,8 +114,8 @@ class LIVE_SportsScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Spacer(),
-                              CircleAvatar(
+                              const Spacer(),
+                              const CircleAvatar(
                                 backgroundImage: ExactAssetImage(
                                     "assets/images/LIVE_Sports/flags/pakistan.png"),
                               ),
@@ -137,7 +136,7 @@ class LIVE_SportsScreen extends StatelessWidget {
                               children: <Widget>[
                                 Container(
                                   height: 200.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                       borderRadius: BorderRadius.only(
                                         topLeft: Radius.circular(10.0),
                                         topRight: Radius.circular(10.0),
@@ -159,7 +158,7 @@ class LIVE_SportsScreen extends StatelessWidget {
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 16.0),
                                   child: Row(
-                                    children: <Widget>[
+                                    children: const <Widget>[
                                       Text(
                                         "Today, 9:24 PM",
                                         style: TextStyle(
@@ -187,7 +186,7 @@ class LIVE_SportsScreen extends StatelessWidget {
                               child: Container(
                                 color: Colors.green,
                                 padding: const EdgeInsets.all(4.0),
-                                child: Text(
+                                child: const Text(
                                   "LIVE",
                                   style: TextStyle(
                                     color: Colors.white,
@@ -200,19 +199,19 @@ class LIVE_SportsScreen extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 10.0),
-                      Divider(),
+                      const Divider(),
                       const SizedBox(height: 10.0),
                       ListTile(
                         title: Text(
                           "Mushfiqur Rahim's fourth ODI century",
                           style: titleTextStyle,
                         ),
-                        subtitle: Text("Today, 7:02 PM | Dhaka"),
+                        subtitle: const Text("Today, 7:02 PM | Dhaka"),
                         trailing: Container(
                           width: 80.0,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: ExactAssetImage(
                                     "assets/images/LIVE_Sports/Mushfiqur1.jpg"),
                                 fit: BoxFit.cover,
@@ -225,12 +224,12 @@ class LIVE_SportsScreen extends StatelessWidget {
                           "Tamim Iqbal's 132 against Pakistan",
                           style: titleTextStyle,
                         ),
-                        subtitle: Text("Today, 7:02 PM | Dhaka"),
+                        subtitle: const Text("Today, 7:02 PM | Dhaka"),
                         trailing: Container(
                           width: 80.0,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image: ExactAssetImage(
                                     "assets/images/LIVE_Sports/Tamim.jpg"),
                                 fit: BoxFit.cover,

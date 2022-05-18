@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import './models/models.dart';
-import './screens/screens.dart';
-import './widgets/widgets.dart';
+import 'models/models.dart';
+import 'screens/screens.dart';
+import 'widgets/widgets.dart';
 
 void main() => runApp(const MyApp());
 
@@ -23,15 +23,13 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.white24, //background of TAJA logo
         secondaryHeaderColor:
             Colors.blue, //secondary header for Jobs and Audiobooks
-        cardColor: Colors.white, //Jobs list view
-        buttonColor: Colors.black,
+        cardColor: Colors.white,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         backgroundColor: Colors.black26,
         secondaryHeaderColor: Colors.white10,
         cardColor: Colors.black12,
-        buttonColor: Colors.tealAccent,
       ),
       initialRoute: RouteNames.splash,
       navigatorObservers: [AppRouteObserver()],

@@ -9,7 +9,7 @@ class RatingWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 1.0),
+      padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 1.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(3.0),
@@ -17,13 +17,13 @@ class RatingWidget extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Icon(
+          const Icon(
             Icons.star,
             color: Colors.orange,
           ),
           Text(
             "${auctionsList[id!]['rating']}",
-            style: TextStyle(color: Colors.orange),
+            style: const TextStyle(color: Colors.orange),
           )
         ],
       ),

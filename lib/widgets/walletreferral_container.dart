@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/models.dart';
 
 class ReferralContainer extends StatelessWidget {
@@ -20,37 +21,37 @@ class ReferralContainer extends StatelessWidget {
                     .apply(fontWeightDelta: 2),
               ),
             ),
-            SizedBox(width: 15),
+            const SizedBox(width: 15),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 9.0, vertical: 5.0),
+              padding: const EdgeInsets.symmetric(horizontal: 9.0, vertical: 5.0),
               decoration: BoxDecoration(
-                color: Color(0xffd5d7dc),
+                color: const Color(0xffd5d7dc),
                 borderRadius: BorderRadius.circular(15.0),
               ),
               child: Text(
                 "${referrals[i!]['status']}",
-                style: TextStyle(color: Colors.black),
+                style: const TextStyle(color: Colors.black),
               ),
             ),
           ],
         ),
-        SizedBox(height: 11),
+        const SizedBox(height: 11),
         Row(
           children: <Widget>[
-            Text("Referral Number: "),
+            const Text("Referral Number: "),
             Text("${referrals[i!]['referral_number']}")
           ],
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Row(
-          children: <Widget>[Text("Type: "), Text("${referrals[i!]['type']}")],
+          children: <Widget>[const Text("Type: "), Text("${referrals[i!]['type']}")],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            SizedBox(width: 15.0),
+            const SizedBox(width: 15.0),
             RaisedButton(
-              child: Text(
+              child: const Text(
                 "Delete",
                 style: TextStyle(color: Colors.white),
               ),
@@ -58,7 +59,7 @@ class ReferralContainer extends StatelessWidget {
               color: lightBlue,
               elevation: 0,
               shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(9.0),
+                borderRadius: BorderRadius.circular(9.0),
               ),
             ),
           ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taja_khobor/models/covid19.dart';
+import '../models/covid19.dart';
 
 const String CaseUpdateDate = 'April 17';
 
@@ -88,7 +88,7 @@ const kInfectedColor = Color(0xFFFF8748);
 const kDeathColor = Color(0xFFFF4848);
 const kRecovercolor = Color(0xFF36C12C);
 const kTextLightColor = Color(0xFF959595);
-final kShadowColor = Color(0xFFB7B7B7).withOpacity(.16);
+final kShadowColor = const Color(0xFFB7B7B7).withOpacity(.16);
 
 // Text Style
 const kHeadingTextStyle = TextStyle(

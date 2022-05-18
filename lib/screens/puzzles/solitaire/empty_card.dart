@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taja_khobor/screens/puzzles/puzzles_screens.dart';
+import '../puzzles_screens.dart';
 
 // The deck of cards which accept the final cards (Ace to King)
 class EmptyCardDeck extends StatefulWidget {
@@ -8,7 +8,7 @@ class EmptyCardDeck extends StatefulWidget {
   final CardAcceptCallback onCardAdded;
   final int? columnIndex;
 
-  EmptyCardDeck({
+  const EmptyCardDeck({
     required this.cardSuit,
     required this.cardsAdded,
     required this.onCardAdded,
@@ -24,7 +24,7 @@ class _EmptyCardDeckState extends State<EmptyCardDeck> {
   Widget build(BuildContext context) {
     return DragTarget<Map>(
       builder: (context, listOne, listTwo) {
-        return widget.cardsAdded.length == 0
+        return widget.cardsAdded.isEmpty
             ? Opacity(
                 opacity: 0.7,
                 child: Container(
@@ -39,7 +39,7 @@ class _EmptyCardDeckState extends State<EmptyCardDeck> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Center(
-                          child: Container(
+                          child: SizedBox(
                             height: 20.0,
                             child: _suitToImage(),
                           ),

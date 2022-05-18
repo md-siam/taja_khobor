@@ -1,8 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:taja_khobor/screens/puzzles/puzzles_screens.dart';
-import 'package:taja_khobor/models/models.dart';
-import 'package:taja_khobor/widgets/widgets.dart';
+import '../puzzles_screens.dart';
+import '../../../models/models.dart';
+import '../../../widgets/widgets.dart';
 
 class GameScreen extends StatefulWidget {
   const GameScreen({Key? key}) : super(key: key);
@@ -52,7 +52,7 @@ class _GameScreenState extends State<GameScreen> {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.puzzles),
+              title: const Text(ScreenTitles.puzzles),
               actions: <Widget>[
                 InkWell(
                   child: Padding(
@@ -77,7 +77,7 @@ class _GameScreenState extends State<GameScreen> {
             body: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Theme.of(context).secondaryHeaderColor,
                   child: Column(
                     children: <Widget>[
@@ -95,7 +95,7 @@ class _GameScreenState extends State<GameScreen> {
                     _buildFinalDecks(),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16.0,
                 ),
                 Row(
@@ -372,15 +372,15 @@ class _GameScreenState extends State<GameScreen> {
     List<PlayingCard> allCards = [];
 
     // Add all cards to deck
-    CardSuit.values.forEach((suit) {
-      CardType.values.forEach((type) {
+    for (var suit in CardSuit.values) {
+      for (var type in CardType.values) {
         allCards.add(PlayingCard(
           cardType: type,
           cardSuit: suit,
           faceUp: false,
         ));
-      });
-    });
+      }
+    }
 
     Random random = Random();
 
@@ -490,7 +490,7 @@ class _GameScreenState extends State<GameScreen> {
       _handleWin();
     }
     setState(() {
-      if (_getListFromIndex(index)!.length != 0) {
+      if (_getListFromIndex(index)!.isNotEmpty) {
         _getListFromIndex(index)![_getListFromIndex(index)!.length - 1]
           ..opened = true
           ..faceUp = true;
@@ -504,15 +504,15 @@ class _GameScreenState extends State<GameScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text("Congratulations!"),
-          content: Text("You Win!"),
+          title: const Text("Congratulations!"),
+          content: const Text("You Win!"),
           actions: <Widget>[
             FlatButton(
               onPressed: () {
                 _initialiseGame();
                 Navigator.pop(context);
               },
-              child: Text("Play again"),
+              child: const Text("Play again"),
             ),
           ],
         );

@@ -61,7 +61,7 @@ class JobContainer extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Text(
               "$description",
               style: Theme.of(context)
@@ -71,7 +71,7 @@ class JobContainer extends StatelessWidget {
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
             ),
-            SizedBox(height: 9),
+            const SizedBox(height: 9),
             Text(
               "$salary",
               style: Theme.of(context)

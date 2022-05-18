@@ -1,4 +1,4 @@
-import 'package:taja_khobor/models/jobs.dart';
+import '../models/jobs.dart';
 
 List<JobModel> jobList = [
   JobModel(

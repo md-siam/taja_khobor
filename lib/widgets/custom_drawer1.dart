@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import '../models/models.dart';
 import '../widgets/widgets.dart';
 
@@ -56,7 +57,7 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
               children: [
                 Container(
                   width: double.infinity,
-                  padding: EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(20),
                   color: Theme.of(context).secondaryHeaderColor,
                   child: Center(
                     child: Column(
@@ -64,24 +65,24 @@ class _AppDrawerState extends State<AppDrawer> with RouteAware {
                         Container(
                           width: 100,
                           height: 100,
-                          margin: EdgeInsets.only(
+                          margin: const EdgeInsets.only(
                             top: 30,
                             bottom: 10,
                           ),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
-                            image: new DecorationImage(
+                            image: DecorationImage(
                               image:
                               ExactAssetImage('assets/images/main/mdsiam.png'),
                               fit: BoxFit.fitHeight,
                             ),
                           ),
                         ),
-                        Text(
+                        const Text(
                           'Md. Siam',
                           style: TextStyle(fontSize: 22, color: Colors.white),
                         ),
-                        Text(
+                        const Text(
                           'Student',
                           style: TextStyle(color: Colors.white),
                         ),

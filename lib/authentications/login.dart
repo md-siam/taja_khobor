@@ -8,7 +8,7 @@ class LoginPage extends StatelessWidget {
     return Container(
       child: ListView(
         children: <Widget>[
-          SizedBox(height: 30.0),
+          const SizedBox(height: 30.0),
           _buildLoginForm(context),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
                     ),
                   );
                 },
-                child: Text(
+                child: const Text(
                   "Sign Up",
                   style: TextStyle(color: Colors.blue, fontSize: 18.0),
                 ),
@@ -36,16 +36,16 @@ class LoginPage extends StatelessWidget {
 
   Container _buildLoginForm(context) {
     return Container(
-      padding: EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(20.0),
       child: Stack(
         children: <Widget>[
           ClipPath(
             clipper: RoundedDiagonalPathClipper(),
             child: Container(
               height: 400,
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(
+                borderRadius: const BorderRadius.all(
                   Radius.circular(40.0),
                 ),
                 color: Theme.of(context).cardColor,
@@ -53,11 +53,11 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(
+                  const SizedBox(
                     height: 90.0,
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "01700000000",
@@ -74,10 +74,10 @@ class LoginPage extends StatelessWidget {
                       color: Colors.blue.shade400,
                     ),
                     padding:
-                        EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Password",
@@ -92,18 +92,18 @@ class LoginPage extends StatelessWidget {
                   Container(
                     child: Divider(color: Colors.blue.shade400),
                     padding:
-                        EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Container(
-                        padding: EdgeInsets.only(right: 20.0),
-                        child: Text("Forgot Password"),
+                        padding: const EdgeInsets.only(right: 20.0),
+                        child: const Text("Forgot Password"),
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10.0,
                   ),
                 ],
@@ -123,7 +123,7 @@ class LoginPage extends StatelessWidget {
               ),
             ],
           ),
-          Container(
+          SizedBox(
             height: 420,
             child: Align(
               alignment: Alignment.bottomCenter,
@@ -132,7 +132,7 @@ class LoginPage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(40.0),
                 ),
-                child: Text(
+                child: const Text(
                   "Login",
                   style: TextStyle(color: Colors.white),
                 ),
@@ -149,7 +149,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
         iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
       ),
       body: _buildPageContent(context),

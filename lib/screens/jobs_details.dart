@@ -14,7 +14,7 @@ class JobsDetailsScreen extends StatelessWidget {
         iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             //color: Theme.of(context).cardColor,
           ),
@@ -24,7 +24,7 @@ class JobsDetailsScreen extends StatelessWidget {
           },
         ),
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Details",
           style: TextStyle(
             color: Colors.white,
@@ -32,7 +32,7 @@ class JobsDetailsScreen extends StatelessWidget {
         ),
         actions: <Widget>[
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.favorite_border,
               //color: Theme.of(context).cardColor,
             ),
@@ -48,7 +48,7 @@ class JobsDetailsScreen extends StatelessWidget {
             left: 0,
             right: 0,
             height: MediaQuery.of(context).size.height / 2,
-            child: Image(
+            child: const Image(
               image: AssetImage('assets/images/jobs/backimage.png'),
               fit: BoxFit.cover,
               color: Colors.black38,
@@ -64,7 +64,7 @@ class JobsDetailsScreen extends StatelessWidget {
               padding: const EdgeInsets.all(15.0),
               decoration: BoxDecoration(
                 color: Theme.of(context).cardColor,
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(25),
                   topRight: Radius.circular(25),
                 ),
@@ -84,7 +84,7 @@ class JobsDetailsScreen extends StatelessWidget {
                           .bodyText2!
                           .apply(color: Colors.grey),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15.0,
                     ),
                     Text(
@@ -100,15 +100,15 @@ class JobsDetailsScreen extends StatelessWidget {
                       maxLines: 3,
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15.0,
                     ),
                     Text(
                       "Workspace",
                       style: Theme.of(context).textTheme.subtitle1,
                     ),
-                    SizedBox(height: 5),
-                    Container(
+                    const SizedBox(height: 5),
+                    SizedBox(
                       height: 130,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
@@ -120,17 +120,17 @@ class JobsDetailsScreen extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10.0),
                               child: Image(
-                                image: AssetImage("${jobList[id].photos![i]}"),
+                                image: AssetImage(jobList[id].photos![i]),
                               ),
                             ),
                           );
                         },
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 15.0,
                     ),
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.height * .7,
                       height: 45,
                       child: RaisedButton(

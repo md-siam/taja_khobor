@@ -19,7 +19,7 @@ class BhejaBilaiScreen extends StatelessWidget {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.bhejabilai),
+              title: const Text(ScreenTitles.bhejabilai),
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
@@ -29,8 +29,8 @@ class BhejaBilaiScreen extends StatelessWidget {
             body: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.only(top: 250),
-                  child: Text("                   No information available.",
+                  padding: const EdgeInsets.only(top: 250),
+                  child: const Text("                   No information available.",
                       style: TextStyle(fontSize: 16)),
                 ),
               ],

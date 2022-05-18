@@ -39,10 +39,10 @@ class _StocksScreenState extends State<StocksScreen> {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.stocks),
+              title: const Text(ScreenTitles.stocks),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.search,
                   ),
                   onPressed: () {
@@ -59,7 +59,7 @@ class _StocksScreenState extends State<StocksScreen> {
             body: Stack(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   width: MediaQuery.of(context).size.width,
                   //color: Colors.black,
                   child: SafeArea(
@@ -78,10 +78,10 @@ class _StocksScreenState extends State<StocksScreen> {
                   bottom: 0,
                   child: AnimatedContainer(
                     height: _offsetY,
-                    duration: Duration(milliseconds: 1),
+                    duration: const Duration(milliseconds: 1),
                     curve: Curves.easeInOut,
                     child: StocksNewsList(
-                      expandedState: this._expandedState,
+                      expandedState: _expandedState,
                       onPanUpdate: (dragDetails) {
                         setState(
                           () {
@@ -94,8 +94,8 @@ class _StocksScreenState extends State<StocksScreen> {
                         debugPrint("onHeaderTapped");
                         setState(
                           () {
-                            this._expandedState =
-                                this._expandedState == ExpandedState.compact
+                            _expandedState =
+                                _expandedState == ExpandedState.compact
                                     ? ExpandedState.expanded
                                     : ExpandedState.compact;
                           },

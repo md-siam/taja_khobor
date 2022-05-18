@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/models.dart';
 
 class WalletHistoryContainer extends StatelessWidget {
@@ -8,18 +9,19 @@ class WalletHistoryContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     IconData? _icon;
-    if (historyContainerList[id]['actionType'] == actions.add)
+    if (historyContainerList[id]['actionType'] == actions.add) {
       _icon = Icons.add;
-    else if (historyContainerList[id]['actionType'] == actions.receive)
+    } else if (historyContainerList[id]['actionType'] == actions.receive) {
       _icon = Icons.mail_outline;
+    }
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+      margin: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
       width: MediaQuery.of(context).size.width / 1.5,
-      padding: EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(15.0),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             blurRadius: 14,
@@ -42,12 +44,12 @@ class WalletHistoryContainer extends StatelessWidget {
                   );
                 },
               ),
-              Spacer(),
+              const Spacer(),
               Container(
                 decoration: BoxDecoration(
                   color: lightBlue,
                   borderRadius: BorderRadius.circular(25.0),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black26,
                       blurRadius: 15.0, // soften the shadow
@@ -71,7 +73,7 @@ class WalletHistoryContainer extends StatelessWidget {
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             "${historyContainerList[id]['title']}",
             style: Theme.of(context)
@@ -83,7 +85,7 @@ class WalletHistoryContainer extends StatelessWidget {
             "${historyContainerList[id]['subtitle']}",
             style: Theme.of(context).textTheme.subtitle1,
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

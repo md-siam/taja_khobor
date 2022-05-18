@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/models.dart';
 
 class JobsCategoryMenu extends StatefulWidget {
@@ -23,18 +24,18 @@ class _CategoryMenuState extends State<JobsCategoryMenu> {
             );
           },
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 15.0),
+            margin: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: <Widget>[
                 Text(
-                  "${jobsCategories[id]}",
+                  jobsCategories[id],
                   style: TextStyle(
                     fontWeight:
                         active == id ? FontWeight.bold : FontWeight.normal,
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(height: 3.0),
+                const SizedBox(height: 3.0),
                 active == id
                     ? Container(
                         height: 3.0,

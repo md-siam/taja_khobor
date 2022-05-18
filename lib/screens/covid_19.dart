@@ -49,7 +49,7 @@ class _COVID19ScreenState extends State<COVID19Screen> {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.covid19),
+              title: const Text(ScreenTitles.covid19),
             ),
             drawer: displayMobileLayout
                 ? const AppDrawer(
@@ -67,7 +67,7 @@ class _COVID19ScreenState extends State<COVID19Screen> {
                     offset: offset,
                   ),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: <Widget>[
                         Row(
@@ -83,7 +83,7 @@ class _COVID19ScreenState extends State<COVID19Screen> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                  TextSpan(
+                                  const TextSpan(
                                     text: "Newest update $CaseUpdateDate",
                                     style: TextStyle(
                                       color: kTextLightColor,
@@ -92,18 +92,18 @@ class _COVID19ScreenState extends State<COVID19Screen> {
                                 ],
                               ),
                             ),
-                            Spacer(),
+                            const Spacer(),
                           ],
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Container(
-                          padding: EdgeInsets.all(20),
+                          padding: const EdgeInsets.all(20),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: Theme.of(context).cardColor,
                             boxShadow: [
                               BoxShadow(
-                                offset: Offset(0, 4),
+                                offset: const Offset(0, 4),
                                 blurRadius: 30,
                                 color: kShadowColor,
                               ),
@@ -130,20 +130,20 @@ class _COVID19ScreenState extends State<COVID19Screen> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 25),
+                        const SizedBox(height: 25),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20),
+                          padding: const EdgeInsets.symmetric(horizontal: 20),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              Text(
+                              const Text(
                                 "Symptoms",
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
@@ -160,22 +160,22 @@ class _COVID19ScreenState extends State<COVID19Screen> {
                                   ],
                                 ),
                               ),
-                              SizedBox(height: 25),
-                              Text(
+                              const SizedBox(height: 25),
+                              const Text(
                                 "Prevention",
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               for (var i = 0; i < COVID19_prev.length; i++)
                                 PreventCard(
                                   text: COVID19_prev[i].text,
                                   image: COVID19_prev[i].imageURL,
                                   title: COVID19_prev[i].title,
                                 ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                             ],
                           ),
                         ),

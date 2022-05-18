@@ -15,7 +15,7 @@ class AuctionDetailsScreen extends StatelessWidget {
         iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
           ),
           iconSize: 30.0,
@@ -24,7 +24,7 @@ class AuctionDetailsScreen extends StatelessWidget {
           },
         ),
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Details",
           style: TextStyle(
             color: Colors.white,
@@ -32,7 +32,7 @@ class AuctionDetailsScreen extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(15.0),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -50,7 +50,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                             height: 200,
                           ),
                         ),
-                        SizedBox(width: 15),
+                        const SizedBox(width: 15),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,13 +65,13 @@ class AuctionDetailsScreen extends StatelessWidget {
                                     "Rating: ",
                                     style: TextStyle(color: grey),
                                   ),
-                                  Icon(
+                                  const Icon(
                                     Icons.star,
                                     color: Colors.orange,
                                   ),
                                   Text(
                                     "${auctionsList[id!]['rating']}",
-                                    style: TextStyle(color: Colors.orange),
+                                    style: const TextStyle(color: Colors.orange),
                                   ),
                                 ],
                               ),
@@ -80,7 +80,7 @@ class AuctionDetailsScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(height: 15.0),
+                    const SizedBox(height: 15.0),
                     Text(
                       "Description",
                       style: Theme.of(context)
@@ -88,13 +88,13 @@ class AuctionDetailsScreen extends StatelessWidget {
                           .headline1!
                           .apply(fontWeightDelta: 2),
                     ),
-                    SizedBox(height: 7.0),
+                    const SizedBox(height: 7.0),
                     Text(
                       "${auctionsList[id!]['desc']}",
                       style: Theme.of(context).textTheme.bodyText2!.apply(),
                       textAlign: TextAlign.justify,
                     ),
-                    SizedBox(height: 15.0),
+                    const SizedBox(height: 15.0),
                     Text(
                       "Screenshots",
                       style: Theme.of(context)
@@ -102,15 +102,15 @@ class AuctionDetailsScreen extends StatelessWidget {
                           .headline1!
                           .apply(fontWeightDelta: 2),
                     ),
-                    SizedBox(height: 7.0),
-                    Container(
+                    const SizedBox(height: 7.0),
+                    SizedBox(
                       height: MediaQuery.of(context).size.height / 4,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: auctionsList[id!]['imgs'].length,
                         itemBuilder: (ctx, imgId) {
                           return Container(
-                            margin: EdgeInsets.symmetric(horizontal: 9.0),
+                            margin: const EdgeInsets.symmetric(horizontal: 9.0),
                             width: MediaQuery.of(context).size.width / 1.5,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15.0),
@@ -128,11 +128,11 @@ class AuctionDetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               child: RaisedButton(
                 color: blue,
-                child: Text(
+                child: const Text(
                   "Reserve a seat",
                   style: TextStyle(
                     color: Colors.white,

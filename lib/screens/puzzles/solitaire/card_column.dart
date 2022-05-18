@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taja_khobor/screens/puzzles/puzzles_screens.dart';
+import '../puzzles_screens.dart';
 
-typedef Null CardAcceptCallback(List<PlayingCard>? card, int? fromIndex);
+typedef CardAcceptCallback = void Function(List<PlayingCard>? card, int? fromIndex);
 
 // This is a stack of overlayed cards (implemented using a stack)
 class CardColumn extends StatefulWidget {
@@ -15,7 +15,7 @@ class CardColumn extends StatefulWidget {
   // The index of the list in the game
   final int columnIndex;
 
-  CardColumn(
+  const CardColumn(
       {required this.cards,
       required this.onCardsAdded,
       required this.columnIndex});
@@ -31,7 +31,7 @@ class _CardColumnState extends State<CardColumn> {
       //alignment: Alignment.topCenter,
       height: 13.0 * 15.0,
       width: 70.0,
-      margin: EdgeInsets.all(2.0),
+      margin: const EdgeInsets.all(2.0),
       child: DragTarget<Map>(
         builder: (context, listOne, listTwo) {
           return Stack(
@@ -48,7 +48,7 @@ class _CardColumnState extends State<CardColumn> {
         },
         onWillAccept: (value) {
           // If empty, accept
-          if (widget.cards!.length == 0) {
+          if (widget.cards!.isEmpty) {
             return true;
           }
 

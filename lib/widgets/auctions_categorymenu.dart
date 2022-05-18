@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/models.dart';
 
 class AuctionsCategoryMenu extends StatefulWidget {
@@ -21,18 +22,18 @@ class _CategoryMenuState extends State<AuctionsCategoryMenu> {
             });
           },
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 15.0),
+            margin: const EdgeInsets.symmetric(horizontal: 15.0),
             child: Column(
               children: <Widget>[
                 Text(
-                  "${auctionsCategories[id]}",
+                  auctionsCategories[id],
                   style: TextStyle(
                     fontWeight:
                         active == id ? FontWeight.bold : FontWeight.normal,
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 3.0,
                 ),
                 active == id

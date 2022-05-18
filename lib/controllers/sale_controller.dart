@@ -1,4 +1,4 @@
-import 'package:taja_khobor/models/sale.dart';
+import '../models/sale.dart';
 
 List<Sale> sale_news() {
   return [

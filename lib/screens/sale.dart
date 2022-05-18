@@ -22,10 +22,10 @@ class SaleScreen extends StatelessWidget {
               // when the app isn't displaying the mobile version of app, hide the menu button that is used to open the navigation drawer
               automaticallyImplyLeading: displayMobileLayout,
               iconTheme: IconThemeData(color: Theme.of(context).buttonColor),
-              title: Text(ScreenTitles.sale),
+              title: const Text(ScreenTitles.sale),
               actions: <Widget>[
                 IconButton(
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.add,
                     size: 28,
                   ),
@@ -41,7 +41,7 @@ class SaleScreen extends StatelessWidget {
             body: Column(
               children: <Widget>[
                 Container(
-                  padding: EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(15),
                   color: Theme.of(context).secondaryHeaderColor,
                   child: Column(
                     children: <Widget>[
@@ -64,10 +64,10 @@ class SaleScreen extends StatelessWidget {
                             crossAxisSpacing: 20,
                             padding: const EdgeInsets.all(8),
                             childAspectRatio: 1,
-                            physics: ScrollPhysics(),
+                            physics: const ScrollPhysics(),
                             shrinkWrap: true,
-                            children: sale_news().map<Widget>((sale_news) {
-                              return _GridDemoPhotoItem(sale_news: sale_news);
+                            children: sale_news().map<Widget>((saleNews) {
+                              return _GridDemoPhotoItem(sale_news: saleNews);
                             }).toList(),
                           ),
                         ),
@@ -95,7 +95,7 @@ class _GridTitleText extends StatelessWidget {
       alignment: AlignmentDirectional.centerStart,
       child: Text(
         text!,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 14,
           color: Colors.white,
         ),
@@ -105,7 +105,7 @@ class _GridTitleText extends StatelessWidget {
 }
 
 class _GridDemoPhotoItem extends StatelessWidget {
-  _GridDemoPhotoItem({
+  const _GridDemoPhotoItem({
     Key? key,
     required this.sale_news,
   }) : super(key: key);
@@ -116,14 +116,14 @@ class _GridDemoPhotoItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final Widget image = Material(
       child: Container(
-        decoration: new BoxDecoration(
-          borderRadius: new BorderRadius.circular(10.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
           color: Colors.white,
-          boxShadow: [
-            new BoxShadow(
+          boxShadow: const [
+            BoxShadow(
               color: Colors.black54,
               blurRadius: 6.0,
-              offset: new Offset(0.0, 4.0),
+              offset: Offset(0.0, 4.0),
             ),
           ],
         ),
@@ -138,7 +138,7 @@ class _GridDemoPhotoItem extends StatelessWidget {
     return GridTile(
       footer: Material(
         color: Colors.transparent,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(10),
           ),

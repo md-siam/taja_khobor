@@ -6,7 +6,7 @@ import '../widgets/widgets.dart';
 class NewsScreen extends StatefulWidget {
   final News? news;
 
-  NewsScreen({this.news});
+  const NewsScreen({this.news});
 
   @override
   _NewsScreenState createState() => _NewsScreenState();
@@ -14,7 +14,7 @@ class NewsScreen extends StatefulWidget {
 
 class _NewsScreenState extends State<NewsScreen> {
   bool isPlaying = false;
-  FlutterTts _flutterTts = FlutterTts();
+  final FlutterTts _flutterTts = FlutterTts();
 
   @override
   void initState() {
@@ -59,19 +59,21 @@ class _NewsScreenState extends State<NewsScreen> {
   Future _speak(String? text) async {
     if (text != null && text.isNotEmpty) {
       var result = await _flutterTts.speak(text);
-      if (result == 1)
+      if (result == 1) {
         setState(() {
           isPlaying = true;
         });
+      }
     }
   }
 
   Future _stop() async {
     var result = await _flutterTts.stop();
-    if (result == 1)
+    if (result == 1) {
       setState(() {
         isPlaying = false;
       });
+    }
   }
 
   @override
@@ -89,7 +91,7 @@ class _NewsScreenState extends State<NewsScreen> {
                   tag: widget.news!.imageUrl!,
                   child: ClipShadowPath(
                     clipper: CircularClipper(),
-                    shadow: Shadow(blurRadius: 20.0),
+                    shadow: const Shadow(blurRadius: 20.0),
                     child: Image(
                       height: 350.0,
                       width: double.infinity,
@@ -103,16 +105,16 @@ class _NewsScreenState extends State<NewsScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   IconButton(
-                    padding: EdgeInsets.only(left: 30.0),
+                    padding: const EdgeInsets.only(left: 30.0),
                     onPressed: () => Navigator.pop(context),
-                    icon: Icon(Icons.arrow_back),
+                    icon: const Icon(Icons.arrow_back),
                     iconSize: 30.0,
                     color: Theme.of(context).buttonColor,
                   ),
                   IconButton(
-                    padding: EdgeInsets.only(left: 30.0),
+                    padding: const EdgeInsets.only(left: 30.0),
                     onPressed: () => print('Add to Favorites'),
-                    icon: Icon(Icons.favorite_border),
+                    icon: const Icon(Icons.favorite_border),
                     iconSize: 30.0,
                     color: Theme.of(context).buttonColor,
                   ),
@@ -124,7 +126,7 @@ class _NewsScreenState extends State<NewsScreen> {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: RawMaterialButton(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     elevation: 12.0,
                     onPressed: () {
                       setState(
@@ -135,15 +137,15 @@ class _NewsScreenState extends State<NewsScreen> {
                         },
                       );
                     },
-                    shape: CircleBorder(),
+                    shape: const CircleBorder(),
                     fillColor: Colors.white,
                     child: isPlaying
-                        ? Icon(
+                        ? const Icon(
                             Icons.stop,
                             size: 60,
                             color: Colors.green,
                           )
-                        : Icon(
+                        : const Icon(
                             Icons.play_arrow,
                             size: 60,
                             color: Colors.red,
@@ -156,7 +158,7 @@ class _NewsScreenState extends State<NewsScreen> {
                 left: 20.0,
                 child: IconButton(
                   onPressed: () => print('Add to My List'),
-                  icon: Icon(Icons.add),
+                  icon: const Icon(Icons.add),
                   iconSize: 40.0,
                   color: Theme.of(context).buttonColor,
                 ),
@@ -166,7 +168,7 @@ class _NewsScreenState extends State<NewsScreen> {
                 right: 25.0,
                 child: IconButton(
                   onPressed: () => print('Share'),
-                  icon: Icon(Icons.share),
+                  icon: const Icon(Icons.share),
                   iconSize: 35.0,
                   color: Theme.of(context).buttonColor,
                 ),
@@ -174,31 +176,31 @@ class _NewsScreenState extends State<NewsScreen> {
             ],
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
+            padding: const EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Text(
                   widget.news!.title!.toUpperCase(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 Text(
                   widget.news!.date!,
-                  style: TextStyle(fontSize: 16.0),
+                  style: const TextStyle(fontSize: 16.0),
                 ),
-                SizedBox(height: 25.0),
+                const SizedBox(height: 25.0),
                 //************************** Description ***********************
-                Container(
+                SizedBox(
                   height: 300.0,
                   child: SingleChildScrollView(
                     child: Text(
                       widget.news!.description!,
-                      style: TextStyle(fontSize: 15.0),
+                      style: const TextStyle(fontSize: 15.0),
                       textAlign: TextAlign.justify,
                     ),
                   ),
