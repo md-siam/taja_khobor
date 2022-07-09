@@ -62,27 +62,27 @@ $ flutter run
 
 Note: To run this application on your system, you will need [git](https://git-scm.com/) and [flutter](https://docs.flutter.dev/get-started/install) environment already installed.
 
-## Directory
+## File Pattern Inside The `lib` Folder
 
 ```
-lib
-├── alerts
+lib/
+├── alerts/
 │   ├── alerts.dart
 │   ├── login_alert.dart
 │   ├── missing_alert.dart
 │   └── success_alert.dart
-├── authentications
+├── authentications/
 │   ├── authentications.dart
 │   ├── login.dart
 │   └── signup.dart
-├── controllers
+├── controllers/
 │   ├── auction_controller.dart
 │   ├── bookmark_controller.dart
 │   ├── controllers.dart
 │   ├── covid19_controller.dart
 │   ├── job_controller.dart
 │   └── sale_controller.dart
-├── models
+├── models/
 │   ├── app_drawer.dart
 │   ├── auctions.dart
 │   ├── bookmarks.dart
@@ -97,9 +97,9 @@ lib
 │   ├── stocks.dart
 │   ├── traffic_alert.dart
 │   └── wallet.dart
-├── screens
-│   ├── puzzles
-│   │   ├── solitaire
+├── screens/
+│   ├── puzzles/
+│   │   ├── solitaire/
 │   │   │   ├── card_column.dart
 │   │   │   ├── empty_card.dart
 │   │   │   ├── game_screen.dart
@@ -127,10 +127,10 @@ lib
 │   ├── traffic_alert.dart
 │   ├── transfer_credits.dart
 │   └── wallet.dart
-├── theme
+├── theme/
 │   ├── light_color.dart
 │   └── theme.dart
-├── widgets
+├── widgets/
 │   ├── app_route_observer.dart
 │   ├── auctions_categorymenu.dart
 │   ├── auctions_container.dart
@@ -159,6 +159,5 @@ lib
 │   ├── walletstatedetail_container.dart
 │   ├── wallettransaction_container.dart
 │   └── widgets.dart
-├── .DS_Store
 └── main.dart
 ```
