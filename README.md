@@ -20,26 +20,30 @@ Note: It's an open-source project; hence anyone can use this code according to t
 
 ## Packages used:
 
-<img align="left" src="screenshots/demo.gif" height="550"></img>
+<img align="right" src="screenshots/demo.gif" height="550"></img>
 
-// For using ready-made clippers<br>
-[flutter_custom_clippers: ^2.0.0](https://pub.dev/packages/flutter_custom_clippers)<br>
-// For custom grid view<br>
-[flutter_staggered_grid_view: ^0.6.1](https://pub.dev/packages/flutter_staggered_grid_view)<br>
-// For displaying svg images<br>
-[flutter_svg: ^1.0.3](https://pub.dev/packages/flutter_svg)<br>
-// For converting text-to-speech<br>
-[flutter_tts: ^3.3.3](https://pub.dev/packages/flutter_tts)<br>
-// For using awesome icons<br>
-[font_awesome_flutter: ^10.1.0](https://pub.dev/packages/font_awesome_flutter)<br>
-// For using fonts available in google fonts<br>
-[google_fonts: ^2.3.2](https://pub.dev/packages/google_fonts)<br>
-// For custom pop-up alert<br>
-[rflutter_alert: ^2.0.4](https://pub.dev/packages/rflutter_alert)<br>
-// For launching specific URLs<br>
-[url_launcher: ^6.1.2](https://pub.dev/packages/url_launcher)<br>
-// For playing videos<br>
-[video_player: ^2.4.2](https://pub.dev/packages/video_player)<br><br><br><br><br><br><br>
+
+```yaml
+# For using ready-made clippers
+flutter_custom_clippers: ^2.0.0
+# For custom grid view
+flutter_staggered_grid_view: ^0.6.1
+# For displaying svg images
+flutter_svg: ^1.0.3
+# For converting text-to-speech
+flutter_tts: ^3.3.3
+# For using awesome icons
+font_awesome_flutter: ^10.1.0
+# For using fonts available in google fonts
+google_fonts: ^2.3.2
+# For custom pop-up alert
+rflutter_alert: ^2.0.4
+# For launching specific URLs
+url_launcher: ^6.1.2
+# For playing videos
+video_player: ^2.4.2
+```
+
 
 ## Installation
 
