@@ -33,10 +33,10 @@ class _SplashScreen extends State<SplashScreen> {
               ),
             ),
             Center(
-              child: RaisedButton(
-                color: Colors.blueAccent,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15),
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor:
+                      MaterialStatePropertyAll<Color>(Colors.green),
                 ),
                 child: Text(
                   "Start",

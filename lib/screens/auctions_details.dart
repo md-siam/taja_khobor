@@ -71,7 +71,8 @@ class AuctionDetailsScreen extends StatelessWidget {
                                   ),
                                   Text(
                                     "${auctionsList[id!]['rating']}",
-                                    style: const TextStyle(color: Colors.orange),
+                                    style:
+                                        const TextStyle(color: Colors.orange),
                                   ),
                                 ],
                               ),
@@ -115,8 +116,8 @@ class AuctionDetailsScreen extends StatelessWidget {
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(15.0),
                               child: Image(
-                                image:
-                                    AssetImage(auctionsList[id!]['imgs'][imgId]),
+                                image: AssetImage(
+                                    auctionsList[id!]['imgs'][imgId]),
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -130,8 +131,11 @@ class AuctionDetailsScreen extends StatelessWidget {
             ),
             SizedBox(
               width: double.infinity,
-              child: RaisedButton(
-                color: blue,
+              child: ElevatedButton(
+                style: const ButtonStyle(
+                  backgroundColor:
+                      MaterialStatePropertyAll<Color>(Colors.green),
+                ),
                 child: const Text(
                   "Reserve a seat",
                   style: TextStyle(

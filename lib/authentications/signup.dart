@@ -53,8 +53,8 @@ class SignupPage extends StatelessWidget {
                     child: Divider(
                       color: Colors.blue.shade400,
                     ),
-                    padding:
-                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                    padding: const EdgeInsets.only(
+                        left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -71,8 +71,8 @@ class SignupPage extends StatelessWidget {
                     child: Divider(
                       color: Colors.blue.shade400,
                     ),
-                    padding:
-                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                    padding: const EdgeInsets.only(
+                        left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -87,8 +87,8 @@ class SignupPage extends StatelessWidget {
                   ),
                   Container(
                     child: Divider(color: Colors.blue.shade400),
-                    padding:
-                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                    padding: const EdgeInsets.only(
+                        left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   const SizedBox(
                     height: 10.0,
@@ -114,16 +114,16 @@ class SignupPage extends StatelessWidget {
             height: 420,
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () => print("Sign up pressed!"),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(40.0),
-                ),
                 child: const Text(
                   "Sign Up",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.blue,
+                style: const ButtonStyle(
+                  backgroundColor:
+                      MaterialStatePropertyAll<Color>(Colors.green),
+                ),
               ),
             ),
           )

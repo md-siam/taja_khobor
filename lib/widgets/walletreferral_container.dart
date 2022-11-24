@@ -23,7 +23,8 @@ class ReferralContainer extends StatelessWidget {
             ),
             const SizedBox(width: 15),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 9.0, vertical: 5.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 9.0, vertical: 5.0),
               decoration: BoxDecoration(
                 color: const Color(0xffd5d7dc),
                 borderRadius: BorderRadius.circular(15.0),
@@ -44,22 +45,26 @@ class ReferralContainer extends StatelessWidget {
         ),
         const SizedBox(height: 5),
         Row(
-          children: <Widget>[const Text("Type: "), Text("${referrals[i!]['type']}")],
+          children: <Widget>[
+            const Text("Type: "),
+            Text("${referrals[i!]['type']}")
+          ],
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             const SizedBox(width: 15.0),
-            RaisedButton(
+            ElevatedButton(
               child: const Text(
                 "Delete",
                 style: TextStyle(color: Colors.white),
               ),
-              onPressed: () {print("Delete this referral");},
-              color: lightBlue,
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(9.0),
+              onPressed: () {
+                print("Delete this referral");
+              },
+              style: const ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(Colors.green),
+                elevation: MaterialStatePropertyAll<double>(0),
               ),
             ),
           ],

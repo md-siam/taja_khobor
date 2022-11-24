@@ -507,7 +507,7 @@ class _GameScreenState extends State<GameScreen> {
           title: const Text("Congratulations!"),
           content: const Text("You Win!"),
           actions: <Widget>[
-            FlatButton(
+            OutlinedButton(
               onPressed: () {
                 _initialiseGame();
                 Navigator.pop(context);

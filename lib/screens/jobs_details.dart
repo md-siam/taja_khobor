@@ -133,7 +133,7 @@ class JobsDetailsScreen extends StatelessWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.height * .7,
                       height: 45,
-                      child: RaisedButton(
+                      child: ElevatedButton(
                         child: Text(
                           "Submit your CV",
                           style: Theme.of(context)
@@ -141,7 +141,10 @@ class JobsDetailsScreen extends StatelessWidget {
                               .button!
                               .apply(color: Colors.white),
                         ),
-                        color: Colors.blue,
+                        style: const ButtonStyle(
+                          backgroundColor:
+                              MaterialStatePropertyAll<Color>(Colors.green),
+                        ),
                         onPressed: () => successAlert(context),
                       ),
                     )

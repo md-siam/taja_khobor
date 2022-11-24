@@ -73,8 +73,8 @@ class LoginPage extends StatelessWidget {
                     child: Divider(
                       color: Colors.blue.shade400,
                     ),
-                    padding:
-                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                    padding: const EdgeInsets.only(
+                        left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -91,8 +91,8 @@ class LoginPage extends StatelessWidget {
                   ),
                   Container(
                     child: Divider(color: Colors.blue.shade400),
-                    padding:
-                        const EdgeInsets.only(left: 20.0, right: 20.0, bottom: 10.0),
+                    padding: const EdgeInsets.only(
+                        left: 20.0, right: 20.0, bottom: 10.0),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -127,16 +127,16 @@ class LoginPage extends StatelessWidget {
             height: 420,
             child: Align(
               alignment: Alignment.bottomCenter,
-              child: RaisedButton(
+              child: ElevatedButton(
                 onPressed: () => print("Login pressed!"),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(40.0),
-                ),
                 child: const Text(
                   "Login",
                   style: TextStyle(color: Colors.white),
                 ),
-                color: Colors.blue,
+                style: const ButtonStyle(
+                  backgroundColor:
+                      MaterialStatePropertyAll<Color>(Colors.green),
+                ),
               ),
             ),
           )

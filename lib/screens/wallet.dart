@@ -108,14 +108,15 @@ class WalletScreen extends StatelessWidget {
                               ),
                               textAlign: TextAlign.center,
                             ),
-                            RaisedButton(
-                              color: lightBlue,
+                            ElevatedButton(
+                              style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll<Color>(
+                                        Colors.green),
+                              ),
                               child: const Text(
                                 "View",
                                 style: TextStyle(color: Colors.white),
-                              ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(9.0),
                               ),
                               onPressed: () {
                                 Navigator.push(
@@ -166,15 +167,18 @@ class WalletScreen extends StatelessWidget {
                               ),
                               textAlign: TextAlign.center,
                             ),
-                            RaisedButton(
-                              color: lightBlue,
+                            ElevatedButton(
+                            style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll<Color>(
+                                        Colors.green),
+                                elevation: MaterialStatePropertyAll<double>(0),
+                              ),  
                               child: const Text(
                                 "View",
                                 style: TextStyle(color: Colors.white),
                               ),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(9.0),
-                              ),
+                              
                               onPressed: () {
                                 Navigator.push(
                                   context,
