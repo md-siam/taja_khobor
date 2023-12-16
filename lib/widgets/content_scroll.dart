@@ -36,7 +36,7 @@ class ContentScroll extends StatelessWidget {
                 onTap: () => print('View $title'),
                 child: Icon(
                   Icons.arrow_forward,
-                  color: Theme.of(context).buttonColor,
+                  // color: Theme.of(context).buttonColor,
                   size: 30.0,
                 ),
               ),
